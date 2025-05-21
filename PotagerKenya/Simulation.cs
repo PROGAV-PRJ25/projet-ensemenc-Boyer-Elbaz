@@ -29,8 +29,11 @@ public class Simulation
             mondeSimule.MaladieOuMort(); // Dire au joueur quelles plantes sont en danger
             mondeSimule.SemaineNiveauxRessources(); //Recap des plantes qui ont grandi
             Console.WriteLine(mondeSimule);
-            mondeSimule.PlanterNouvellePlante();
-            // Donner au joueur la possibilité de planter si ressources nécessaires
+            mondeSimule.PlanterNouvellePlante(); // Donner au joueur la possibilité de planter si ressources nécessaires
+
+            // Afficher s'il y a un intrus
+
+            
 
             Console.ReadLine();
         }

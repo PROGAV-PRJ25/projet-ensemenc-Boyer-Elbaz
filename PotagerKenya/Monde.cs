@@ -325,7 +325,7 @@ public class Monde
                                                 Console.WriteLine("Choisissez la colonne de la plante");
                                                 colonnePlante = Convert.ToInt32(Console.ReadLine());
                                                 colonnePlante--;
-                                                if ((lignePlante != 1) && (lignePlante != 2) && (lignePlante != 3) && (lignePlante != 4) && (lignePlante != 5) && (lignePlante != 6) && (lignePlante != 7) || (colonnePlante != 1) && (colonnePlante != 2) && (colonnePlante != 3) && (colonnePlante != 4) && (colonnePlante != 5) && (colonnePlante != 6) && (colonnePlante != 7))
+                                                if ((lignePlante < 0) && (lignePlante > 6) || (colonnePlante != 1) && (colonnePlante < 0) && (colonnePlante > 6))
                                                 {
                                                     Console.WriteLine("Veuillez entrer une ligne ou colonne valide");
                                                 }
@@ -370,7 +370,7 @@ public class Monde
                                                 Console.WriteLine("Choisissez la colonne de la plante");
                                                 colonnePlante = Convert.ToInt32(Console.ReadLine());
                                                 colonnePlante--;
-                                                if ((lignePlante != 1) && (lignePlante != 2) && (lignePlante != 3) && (lignePlante != 4) && (lignePlante != 5) && (lignePlante != 6) && (lignePlante != 7) || (colonnePlante != 1) && (colonnePlante != 2) && (colonnePlante != 3) && (colonnePlante != 4) && (colonnePlante != 5) && (colonnePlante != 6) && (colonnePlante != 7))
+                                                if ((lignePlante < 0) && (lignePlante > 6) || (colonnePlante != 1) && (colonnePlante < 0) && (colonnePlante > 6))
                                                 {
                                                     Console.WriteLine("Veuillez entrer une ligne ou colonne valide");
                                                 }
@@ -419,7 +419,7 @@ public class Monde
                                                 Console.WriteLine("Choisissez la colonne de la plante");
                                                 colonnePlante = Convert.ToInt32(Console.ReadLine());
                                                 colonnePlante--;
-                                                if ((lignePlante != 1) && (lignePlante != 2) && (lignePlante != 3) && (lignePlante != 4) && (lignePlante != 5) && (lignePlante != 6) && (lignePlante != 7) || (colonnePlante != 1) && (colonnePlante != 2) && (colonnePlante != 3) && (colonnePlante != 4) && (colonnePlante != 5) && (colonnePlante != 6) && (colonnePlante != 7))
+                                                if ((lignePlante < 0) && (lignePlante > 6) || (colonnePlante != 1) && (colonnePlante < 0) && (colonnePlante > 6))
                                                 {
                                                     Console.WriteLine("Veuillez entrer une ligne ou colonne valide");
                                                 }
@@ -501,7 +501,7 @@ public class Monde
                                                 Console.WriteLine("Choisissez la colonne de la plante");
                                                 colonnePlante = Convert.ToInt32(Console.ReadLine());
                                                 colonnePlante--;
-                                                if ((lignePlante != 1) && (lignePlante != 2) && (lignePlante != 3) && (lignePlante != 4) && (lignePlante != 5) && (lignePlante != 6) && (lignePlante != 7) || (colonnePlante != 1) && (colonnePlante != 2) && (colonnePlante != 3) && (colonnePlante != 4) && (colonnePlante != 5) && (colonnePlante != 6) && (colonnePlante != 7))
+                                                if ((lignePlante < 0) && (lignePlante > 6) || (colonnePlante != 1) && (colonnePlante < 0) && (colonnePlante > 6))
                                                 {
                                                     Console.WriteLine("Veuillez entrer une ligne ou colonne valide");
                                                 }
@@ -550,7 +550,7 @@ public class Monde
                                                 Console.WriteLine("Choisissez la colonne de la plante");
                                                 colonnePlante = Convert.ToInt32(Console.ReadLine());
                                                 colonnePlante--;
-                                                if ((lignePlante != 1) && (lignePlante != 2) && (lignePlante != 3) && (lignePlante != 4) && (lignePlante != 5) && (lignePlante != 6) && (lignePlante != 7) || (colonnePlante != 1) && (colonnePlante != 2) && (colonnePlante != 3) && (colonnePlante != 4) && (colonnePlante != 5) && (colonnePlante != 6) && (colonnePlante != 7))
+                                                if ((lignePlante < 0) && (lignePlante > 6) || (colonnePlante != 1) && (colonnePlante < 0) && (colonnePlante > 6))
                                                 {
                                                     Console.WriteLine("Veuillez entrer une ligne ou colonne valide");
                                                 }
@@ -599,7 +599,7 @@ public class Monde
                                                 Console.WriteLine("Choisissez la colonne de la plante");
                                                 colonnePlante = Convert.ToInt32(Console.ReadLine());
                                                 colonnePlante--;
-                                                if ((lignePlante != 1) && (lignePlante != 2) && (lignePlante != 3) && (lignePlante != 4) && (lignePlante != 5) && (lignePlante != 6) && (lignePlante != 7) || (colonnePlante != 1) && (colonnePlante != 2) && (colonnePlante != 3) && (colonnePlante != 4) && (colonnePlante != 5) && (colonnePlante != 6) && (colonnePlante != 7))
+                                                if ((lignePlante < 0) && (lignePlante > 6) || (colonnePlante != 1) && (colonnePlante < 0) && (colonnePlante > 6))
                                                 {
                                                     Console.WriteLine("Veuillez entrer une ligne ou colonne valide");
                                                 }
@@ -649,7 +649,7 @@ public class Monde
                                                 Console.WriteLine("Choisissez la colonne de la plante");
                                                 colonnePlante = Convert.ToInt32(Console.ReadLine());
                                                 colonnePlante--;
-                                                if ((lignePlante != 1) && (lignePlante != 2) && (lignePlante != 3) && (lignePlante != 4) && (lignePlante != 5) && (lignePlante != 6) && (lignePlante != 7) || (colonnePlante != 1) && (colonnePlante != 2) && (colonnePlante != 3) && (colonnePlante != 4) && (colonnePlante != 5) && (colonnePlante != 6) && (colonnePlante != 7))
+                                                if ((lignePlante < 0) && (lignePlante > 6) || (colonnePlante != 1) && (colonnePlante < 0) && (colonnePlante > 6))
                                                 {
                                                     Console.WriteLine("Veuillez entrer une ligne ou colonne valide");
                                                 }
@@ -701,7 +701,7 @@ public class Monde
                                                 Console.WriteLine("Choisissez la colonne de la plante");
                                                 colonnePlante = Convert.ToInt32(Console.ReadLine());
                                                 colonnePlante--;
-                                                if ((lignePlante != 1) && (lignePlante != 2) && (lignePlante != 3) && (lignePlante != 4) && (lignePlante != 5) && (lignePlante != 6) && (lignePlante != 7) || (colonnePlante != 1) && (colonnePlante != 2) && (colonnePlante != 3) && (colonnePlante != 4) && (colonnePlante != 5) && (colonnePlante != 6) && (colonnePlante != 7))
+                                                if ((lignePlante < 0) && (lignePlante > 6) || (colonnePlante != 1) && (colonnePlante < 0) && (colonnePlante > 6))
                                                 {
                                                     Console.WriteLine("Veuillez entrer une ligne ou colonne valide");
                                                 }
@@ -750,7 +750,7 @@ public class Monde
                                                 Console.WriteLine("Choisissez la colonne de la plante");
                                                 colonnePlante = Convert.ToInt32(Console.ReadLine());
                                                 colonnePlante--;
-                                                if ((lignePlante != 1) && (lignePlante != 2) && (lignePlante != 3) && (lignePlante != 4) && (lignePlante != 5) && (lignePlante != 6) && (lignePlante != 7) || (colonnePlante != 1) && (colonnePlante != 2) && (colonnePlante != 3) && (colonnePlante != 4) && (colonnePlante != 5) && (colonnePlante != 6) && (colonnePlante != 7))
+                                                if ((lignePlante < 0) && (lignePlante > 6) || (colonnePlante != 1) && (colonnePlante < 0) && (colonnePlante > 6))
                                                 {
                                                     Console.WriteLine("Veuillez entrer une ligne ou colonne valide");
                                                 }
@@ -799,7 +799,7 @@ public class Monde
                                                 Console.WriteLine("Choisissez la colonne de la plante");
                                                 colonnePlante = Convert.ToInt32(Console.ReadLine());
                                                 colonnePlante--;
-                                                if ((lignePlante != 1) && (lignePlante != 2) && (lignePlante != 3) && (lignePlante != 4) && (lignePlante != 5) && (lignePlante != 6) && (lignePlante != 7) || (colonnePlante != 1) && (colonnePlante != 2) && (colonnePlante != 3) && (colonnePlante != 4) && (colonnePlante != 5) && (colonnePlante != 6) && (colonnePlante != 7))
+                                                if ((lignePlante < 0) && (lignePlante > 6) || (colonnePlante != 1) && (colonnePlante < 0) && (colonnePlante > 6))
                                                 {
                                                     Console.WriteLine("Veuillez entrer une ligne ou colonne valide");
                                                 }
@@ -881,7 +881,7 @@ public class Monde
                                                 Console.WriteLine("Choisissez la colonne de la plante");
                                                 colonnePlante = Convert.ToInt32(Console.ReadLine());
                                                 colonnePlante--;
-                                                if ((lignePlante != 1) && (lignePlante != 2) && (lignePlante != 3) && (lignePlante != 4) && (lignePlante != 5) && (lignePlante != 6) && (lignePlante != 7) || (colonnePlante != 1) && (colonnePlante != 2) && (colonnePlante != 3) && (colonnePlante != 4) && (colonnePlante != 5) && (colonnePlante != 6) && (colonnePlante != 7))
+                                                if ((lignePlante < 0) && (lignePlante > 6) || (colonnePlante != 1) && (colonnePlante < 0) && (colonnePlante > 6))
                                                 {
                                                     Console.WriteLine("Veuillez entrer une ligne ou colonne valide");
                                                 }
@@ -930,7 +930,7 @@ public class Monde
                                                 Console.WriteLine("Choisissez la colonne de la plante");
                                                 colonnePlante = Convert.ToInt32(Console.ReadLine());
                                                 colonnePlante--;
-                                                if ((lignePlante != 1) && (lignePlante != 2) && (lignePlante != 3) && (lignePlante != 4) && (lignePlante != 5) && (lignePlante != 6) && (lignePlante != 7) || (colonnePlante != 1) && (colonnePlante != 2) && (colonnePlante != 3) && (colonnePlante != 4) && (colonnePlante != 5) && (colonnePlante != 6) && (colonnePlante != 7))
+                                                if ((lignePlante < 0) && (lignePlante > 6) || (colonnePlante != 1) && (colonnePlante < 0) && (colonnePlante > 6))
                                                 {
                                                     Console.WriteLine("Veuillez entrer une ligne ou colonne valide");
                                                 }
@@ -980,7 +980,7 @@ public class Monde
                                                 Console.WriteLine("Choisissez la colonne de la plante");
                                                 colonnePlante = Convert.ToInt32(Console.ReadLine());
                                                 colonnePlante--;
-                                                if ((lignePlante != 1) && (lignePlante != 2) && (lignePlante != 3) && (lignePlante != 4) && (lignePlante != 5) && (lignePlante != 6) && (lignePlante != 7) || (colonnePlante != 1) && (colonnePlante != 2) && (colonnePlante != 3) && (colonnePlante != 4) && (colonnePlante != 5) && (colonnePlante != 6) && (colonnePlante != 7))
+                                                if ((lignePlante < 0) && (lignePlante > 6) || (colonnePlante != 1) && (colonnePlante < 0) && (colonnePlante > 6))
                                                 {
                                                     Console.WriteLine("Veuillez entrer une ligne ou colonne valide");
                                                 }

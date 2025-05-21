@@ -1,1 +1,2 @@
-﻿Console.WriteLine("aaa");
+﻿Simulation sim = new Simulation();
+sim.Simuler();

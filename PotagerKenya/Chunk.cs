@@ -15,7 +15,7 @@ public class Chunk : Animal
     int x_random;
     int y_random;
     Random rng = new Random();
-    int probaApparition = rng.Next(0,5); // Chunk le malicieux 🐿️ apparaît une fois sur 4 pour s'emparer de nos récoltes
+    int probaApparition = rng.Next(0,4); // Chunk le malicieux 🐿️ apparaît une fois sur 3 pour s'emparer de nos récoltes
     if (probaApparition == 0)
     {
       int numeroTerrainChunk = rng.Next(1, 5);
@@ -47,15 +47,15 @@ public class Chunk : Animal
             if (reaction == 1)
             {
               Console.WriteLine("Vous : *ROOOAAAAR*");
-              probaDisparition = rng.Next(0, 4);
-              if (probaDisparition == 0) // Chunk part quand on lui fait peur
+              probaDisparition = rng.Next(0, 3);
+              if (probaDisparition == 0) // Chunk part quand on lui fait peur (1/3)
               {
                 chunkReste = false;
                 terrain.grille[unChunk.x][unChunk.y] = caseAvantChunk;
                 Console.WriteLine(terrain);
                 Console.WriteLine("CHUNK S'EST ENFUI"); // Chunk s'enfui
               }
-              else //Chunk dévort la plante même quand on lui fait peur
+              else //Chunk dévort la plante même quand on lui fait peur (2/3)
               {
                 terrain.grille[unChunk.x][unChunk.y] = "🐿️";
                 Console.WriteLine(terrain);
@@ -97,12 +97,45 @@ public class Chunk : Animal
               if (terrain.ressourcesTotales == 0)
               {
                 chunkReste = false;
-                Console.WriteLine("Vous n'avez aucune ressource à donner à Chunk...");
+                Console.WriteLine("Vous n'avez aucune ressource à donner à Chunk... il va se venger (Appuyez sur ENTREE)"); // Vous ne donnez rien à Chunk donc il dévore vos plantes :
+                Console.ReadLine();
+                terrain.grille[unChunk.x][unChunk.y] = "🐿️";
+                Console.WriteLine(terrain);
+                Console.WriteLine("CHUNK A DEVORE TOUT CE QUI SE TROUVAIT SUR SA CASE (Appuyez sur ENTREE)"); // Chunk mange
+                Console.ReadLine();
+                terrain.grille[unChunk.x][unChunk.y] = "🟫"; //Chunk se déplace
+                if ((unChunk.x < 6) && (terrain.grille[unChunk.x + 1][unChunk.y] == "🟫"))
+                {
+                  unChunk.x++; //Chunk se déplace ensuite vers le bas
+                  caseAvantChunk = terrain.grille[unChunk.x][unChunk.y];
+                  terrain.grille[unChunk.x][unChunk.y] = "🐿️";
+                }
+                else if ((unChunk.x < 6) && (terrain.grille[unChunk.x + 1][unChunk.y] != "🟫"))
+                {
+                  unChunk.x++; //Chunk se déplace ensuite vers le bas
+                  caseAvantChunk = terrain.grille[unChunk.x][unChunk.y];
+                  terrain.grille[unChunk.x][unChunk.y] += "🐿️";
+
+                }
+                else if ((unChunk.x == 6) && (terrain.grille[unChunk.x - 1][unChunk.y] == "🟫"))
+                {
+                  unChunk.x--; //Chunk se déplace vers le haut s'il ne peut pas aller en bas
+                  caseAvantChunk = terrain.grille[unChunk.x][unChunk.y];
+                  terrain.grille[unChunk.x][unChunk.y] = "🐿️";
+                }
+                else if ((unChunk.x == 6) && (terrain.grille[unChunk.x - 1][unChunk.y] != "🟫"))
+                {
+                  unChunk.x--; //Chunk se déplace vers le haut s'il ne peut pas aller en bas
+                  caseAvantChunk = terrain.grille[unChunk.x][unChunk.y];
+                  terrain.grille[unChunk.x][unChunk.y] += "🐿️";
+                }
+                Console.WriteLine(terrain);
+                Console.WriteLine("CHUNK SE DEPLACE POUR DEVORER DE NOUVELLES PLANTES");
               }
               else
               {
-                probaDisparition = rng.Next(0, 3);
-                if (probaDisparition == 0) // Chunk part quand on lui donne une ressource
+                probaDisparition = rng.Next(0, 2);
+                if (probaDisparition == 0) // Chunk part quand on lui donne une ressource (1/2)
                 {
                   chunkReste = false;
                   terrain.grille[unChunk.x][unChunk.y] = caseAvantChunk;
@@ -135,7 +168,7 @@ public class Chunk : Animal
                       }
                       break;
                     case 2:
-                      Console.WriteLine("Voulez-vous lui donner ? (avocat 🥑, sorgho 🍆, coco 🥥");
+                      Console.WriteLine("Voulez-vous lui donner ? (avocat 🥑, sorgho 🍆, coco 🥥)");
                       ressourcePourChunk = Convert.ToString(Console.ReadLine());
                       if (ressourcePourChunk == "avocat")
                       {
@@ -160,7 +193,7 @@ public class Chunk : Animal
                       }
                       break;
                     case 3:
-                      Console.WriteLine("Voulez-vous lui donner ?  (lentille 🟢, blé 🌾, rose 🌹");
+                      Console.WriteLine("Voulez-vous lui donner ?  (lentille 🟢, blé 🌾, rose 🌹)");
                       ressourcePourChunk = Convert.ToString(Console.ReadLine());
                       if (ressourcePourChunk == "lentille")
                       {
@@ -185,7 +218,7 @@ public class Chunk : Animal
                       }
                       break;
                     case 4:
-                      Console.WriteLine("Voulez-vous lui donner ? (ananas 🍍, tomate 🍅, palmier 🌴");
+                      Console.WriteLine("Voulez-vous lui donner ? (ananas 🍍, tomate 🍅, palmier 🌴)");
                       ressourcePourChunk = Convert.ToString(Console.ReadLine());
                       if (ressourcePourChunk == "ananas")
                       {
@@ -214,7 +247,7 @@ public class Chunk : Animal
                   Console.WriteLine(terrain);
                   Console.WriteLine("CHUNK S'EST ENFUI"); // Chunk s'enfui
                 }
-                else //Chunk dévort la plante alors même qu'on lui donne une ressource pour qu'il parte
+                else //Chunk dévort la plante alors même qu'on lui donne une ressource pour qu'il parte (1/2)
                 {
                   switch (numeroTerrainChunk)
                   {
@@ -353,9 +386,6 @@ public class Chunk : Animal
                   Console.WriteLine(terrain);
                   Console.WriteLine("CHUNK SE DEPLACE POUR DEVORER DE NOUVELLES PLANTES");
                 }
-                terrain.grille[unChunk.x][unChunk.y] = caseAvantChunk;
-                Console.WriteLine(terrain);
-                Console.WriteLine("CHUNK S'EST ENFUI");
 
               }
             }

@@ -53,7 +53,10 @@ public class Simulation
             Console.WriteLine(mondeSimule);
             mondeSimule.PlanterNouvellePlante(); // Donner au joueur la possibilité de planter si ressources nécessaires
 
-            mondeSimule.leChunk.ApparitionAnimal(mondeSimule);                         // Afficher s'il y a un intrus
+      
+            
+                mondeSimule.leChunk.ApparitionAnimal(mondeSimule);   // Afficher s'il y a un intrus  
+
 
             Console.ReadLine();
         }

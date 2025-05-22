@@ -15,7 +15,7 @@ public class Chunk : Animal
     int x_random;
     int y_random;
     Random rng = new Random();
-    int probaApparition = 0; // Chunk le malicieux 🐿️ apparaît une fois sur 4 pour s'emparer de nos récoltes
+    int probaApparition = rng.Next(0,5); // Chunk le malicieux 🐿️ apparaît une fois sur 4 pour s'emparer de nos récoltes
     if (probaApparition == 0)
     {
       int numeroTerrainChunk = rng.Next(1, 5);
@@ -39,8 +39,6 @@ public class Chunk : Animal
           Console.WriteLine(terrain);
           do
           {
-
-
             Console.WriteLine($"CHUNK EST SUR LE TERRAIN {numeroTerrainChunk}!! Appuyer sur ENTREE");
             Console.ReadLine();
 

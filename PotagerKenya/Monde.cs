@@ -2,6 +2,8 @@ public class Monde
 {
     public List<Terrain> terrainsDuMonde {get; set;}
 
+    public Chunk leChunk {get; set;}
+
     public int semaine {get; set;}
 
     public int mois {get; set;}
@@ -19,6 +21,8 @@ public class Monde
         terrainsDuMonde.Add(terrain2);
         terrainsDuMonde.Add(terrain3);
         terrainsDuMonde.Add(terrain4);
+
+        leChunk = new Chunk();
 
         semaine = 1;
     }

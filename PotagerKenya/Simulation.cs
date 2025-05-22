@@ -1,6 +1,7 @@
 public class Simulation
 {
     public Monde mondeSimule;
+
     public Meteo meteoSimulee;
 
     public EcranTitre ecranTitreSimule;
@@ -14,13 +15,13 @@ public class Simulation
 
     public void Simuler()
     {
-        ecranTitreSimule.AfficherEcranTitre();
+        ecranTitreSimule.AfficherEcranTitre();  // Ecran titre
         Console.ReadLine();
-        ecranTitreSimule.ReglesDuJeu();
+        ecranTitreSimule.ReglesDuJeu(); // Règles du jeu
         Console.ReadLine();
 
         Console.OutputEncoding = System.Text.Encoding.UTF8;
-        Console.ForegroundColor = ConsoleColor.Green;
+        Console.ForegroundColor = ConsoleColor.Green; // Choix du nombre de semaines à simuler
         Console.WriteLine(@"
       ╔══════════════════════════════════════════════════════════════════╗
       ║                                                                  ║
@@ -33,17 +34,17 @@ public class Simulation
         int NbeTours = Convert.ToInt32(Console.ReadLine());
 
 
-        foreach (var terrain in mondeSimule.terrainsDuMonde)
+        foreach (var terrain in mondeSimule.terrainsDuMonde) // Initialisation des plantes sur chaque terrain
         {
             terrain.DebutJeu();
         }
 
-        meteoSimulee.NouvelleMeteo(mondeSimule);
-        Console.WriteLine(mondeSimule);
+        meteoSimulee.NouvelleMeteo(mondeSimule); //Création de la première météo du monde
+        Console.WriteLine(mondeSimule); // Affichage du monde semaine 1
         Console.ReadLine();
 
 
-        for (int i = 1; i <= NbeTours; i++)
+        for (int i = 1; i <= NbeTours; i++) // Nombre de tours de jeu simulés en fonction de ce que voulait le joueur
         {
             Console.WriteLine($"===== Semaine passée =====");
             mondeSimule.MaladieOuMort(); // Dire au joueur quelles plantes sont en danger
@@ -51,7 +52,7 @@ public class Simulation
             Console.WriteLine(mondeSimule);
             mondeSimule.PlanterNouvellePlante(); // Donner au joueur la possibilité de planter si ressources nécessaires
 
-            // Afficher s'il y a un intrus
+            mondeSimule.leChunk.ApparitionAnimal(mondeSimule); // Afficher s'il y a un intrus
 
             Console.ReadLine();
         }

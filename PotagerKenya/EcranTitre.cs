@@ -53,7 +53,7 @@ public class EcranTitre
 ║                                                                              ║
 ║  🎮 Que la partie commence !                                                 ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
-║           > Appuyez sur ENTREE pour commencer à jouer <  
+            > Appuyez sur ENTREE pour commencer à jouer <  
 ");
 
 

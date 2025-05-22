@@ -99,6 +99,7 @@ public class Chunk : Animal
               probaDisparition = rng.Next(0, 3);
               if (probaDisparition == 0)
               {
+                chunkReste = false;
                 switch (numeroTerrainChunk)
                 {
                   case 1:
@@ -113,11 +114,18 @@ public class Chunk : Animal
                     }
                     else if (ressourcePourChunk == "baobab")
                     {
-                      terrain.ressources[1]--;
+                      if (terrain.ressources[1] > 0)
+                        terrain.ressources[1]--;
+                      else
+                        Console.WriteLine("Vous n'avez plus de baobab à donner à Chuck");
+                      
                     }
                     else if (ressourcePourChunk == "sorgho")
                     {
-                      terrain.ressources[2]--;
+                      if (terrain.ressources[2] > 0)
+                        terrain.ressources[2]--;
+                      else
+                        Console.WriteLine("Vous n'avez plus de sorgho à donner à Chuck");
                     }
                     break;
                   case 2:
@@ -125,15 +133,24 @@ public class Chunk : Animal
                     ressourcePourChunk = Convert.ToString(Console.ReadLine());
                     if (ressourcePourChunk == "avocat")
                     {
-                      terrain.ressources[0]--;
+                      if (terrain.ressources[0] > 0)
+                        terrain.ressources[0]--;
+                      else
+                        Console.WriteLine("Vous n'avez plus d'avocat à donner à Chuck");
                     }
                     if (ressourcePourChunk == "sorgho")
                     {
-                      terrain.ressources[1]--;
+                      if (terrain.ressources[1] > 0)
+                        terrain.ressources[1]--;
+                      else
+                        Console.WriteLine("Vous n'avez plus de sorgho à donner à Chuck");
                     }
                     if (ressourcePourChunk == "coco")
                     {
-                      terrain.ressources[2]--;
+                      if (terrain.ressources[2] > 0)
+                        terrain.ressources[2]--;
+                      else
+                        Console.WriteLine("Vous n'avez plus de sorgho à donner à Chuck");
                     }
                     break;
                   case 3:
@@ -141,15 +158,24 @@ public class Chunk : Animal
                     ressourcePourChunk = Convert.ToString(Console.ReadLine());
                     if (ressourcePourChunk == "lentille")
                     {
-                      terrain.ressources[0]--;
+                      if (terrain.ressources[0] > 0)
+                        terrain.ressources[0]--;
+                      else
+                        Console.WriteLine("Vous n'avez plus de lentille à donner à Chuck");
                     }
                     if (ressourcePourChunk == "blé")
                     {
-                      terrain.ressources[1]--;
+                      if (terrain.ressources[1] > 0)
+                        terrain.ressources[1]--;
+                      else
+                        Console.WriteLine("Vous n'avez plus de blé à donner à Chuck");
                     }
                     if (ressourcePourChunk == "rose")
                     {
-                      terrain.ressources[2]--;
+                      if (terrain.ressources[2] > 0)
+                        terrain.ressources[2]--;
+                      else
+                        Console.WriteLine("Vous n'avez plus de rose à donner à Chuck");
                     }
                     break;
                   case 4:
@@ -157,15 +183,24 @@ public class Chunk : Animal
                     ressourcePourChunk = Convert.ToString(Console.ReadLine());
                     if (ressourcePourChunk == "ananas")
                     {
-                      terrain.ressources[0]--;
+                      if (terrain.ressources[0] > 0)
+                        terrain.ressources[0]--;
+                      else
+                        Console.WriteLine("Vous n'avez plus d'ananas à donner à Chuck");
                     }
                     if (ressourcePourChunk == "tomate")
                     {
-                      terrain.ressources[1]--;
+                      if (terrain.ressources[1] > 0)
+                        terrain.ressources[1]--;
+                      else
+                        Console.WriteLine("Vous n'avez plus de tomate à donner à Chuck");
                     }
                     if (ressourcePourChunk == "palmier")
                     {
-                      terrain.ressources[2]--;
+                      if (terrain.ressources[2] > 0)
+                        terrain.ressources[2]--;
+                      else
+                        Console.WriteLine("Vous n'avez plus de palmier à donner à Chuck");
                     }
                     break;
                 }

@@ -46,13 +46,14 @@ public class Simulation
 
         for (int i = 1; i <= NbeTours; i++) // Nombre de tours de jeu simulés en fonction de ce que voulait le joueur
         {
+            meteoSimulee.NouvelleMeteo(mondeSimule); //Création de la nouvelle météo du monde
             Console.WriteLine($"===== Semaine passée =====");
             mondeSimule.MaladieOuMort(); // Dire au joueur quelles plantes sont en danger
             mondeSimule.SemaineNiveauxRessources(); //Recap des plantes qui ont grandi
             Console.WriteLine(mondeSimule);
             mondeSimule.PlanterNouvellePlante(); // Donner au joueur la possibilité de planter si ressources nécessaires
 
-            mondeSimule.leChunk.ApparitionAnimal(mondeSimule); // Afficher s'il y a un intrus
+            mondeSimule.leChunk.ApparitionAnimal(mondeSimule);                         // Afficher s'il y a un intrus
 
             Console.ReadLine();
         }

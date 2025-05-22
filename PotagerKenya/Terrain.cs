@@ -1,14 +1,14 @@
 public abstract class Terrain
 {
-    public int x {get; set;}
-    public int y {get; set;}
+    public int x { get; set; }
+    public int y { get; set; }
 
-    public string[][] grille {get; set;}
+    public string[][] grille { get; set; }
 
-    public List<Plante> plantes {get; set;}
+    public List<Plante> plantes { get; set; }
 
-    public int[] ressources {get; set;}
-    
+    public int[] ressources { get; set; }
+
     public int ressourcesTotales => ressources.Sum();
 
 
@@ -16,24 +16,24 @@ public abstract class Terrain
     // Attributs définissant le type de terrain :
     public int numeroTerrain { get; set; }
 
-    public string biome {get; set;}
+    public string biome { get; set; }
 
-    public int altitudeEnMetres {get; set;}
+    public int altitudeEnMetres { get; set; }
 
-    public string typeDeSol {get; set;}
+    public string typeDeSol { get; set; }
 
-    public int temperatureMoyenneEnDeg {get; set;}
+    public int temperatureMoyenneEnDeg { get; set; }
 
-    public int humiditeMoyenne {get; set;} // l'humidité peut varier de 0 à 100
+    public int humiditeMoyenne { get; set; } // l'humidité peut varier de 0 à 100
 
-    public int luminositeMoyenne {get; set;}
+    public int luminositeMoyenne { get; set; }
 
     // Attributs définissant les conditions climatiques en temps réel :
-    public int temperatureActuelleEnDeg {get; set;}
+    public int temperatureActuelleEnDeg { get; set; }
 
-    public int humiditeActuelle {get; set;} 
+    public int humiditeActuelle { get; set; }
 
-    public int luminositeActuelle {get; set;}
+    public int luminositeActuelle { get; set; }
 
     public Terrain(int X = 7, int Y = 7)
     {
@@ -75,22 +75,22 @@ public abstract class Terrain
 
                 // Position des plantes
 
-                int x_aleatoire = rng.Next(0,x);
-                int y_aleatoire = rng.Next(0,y);
+                int x_aleatoire = rng.Next(0, x);
+                int y_aleatoire = rng.Next(0, y);
 
-                foreach(Plante plante in plantes)
+                foreach (Plante plante in plantes)
                 {
-                    while(grille[x_aleatoire][y_aleatoire] != "🟫")
+                    while (grille[x_aleatoire][y_aleatoire] != "🟫")
                     {
-                        x_aleatoire = rng.Next(0,x);
-                        y_aleatoire = rng.Next(0,y);
+                        x_aleatoire = rng.Next(0, x);
+                        y_aleatoire = rng.Next(0, y);
                     }
-                    
+
                     grille[x_aleatoire][y_aleatoire] = plante.visuelPlante;
                     plante.x = x_aleatoire;
                     plante.y = y_aleatoire;
                 }
-            break;
+                break;
             case 2: // Dans la forêt tropicale, le joueur commence avec un avocatier, un safou et un cocotier
                 Avocat avocat1 = new Avocat();
                 plantes.Add(avocat1);
@@ -105,24 +105,24 @@ public abstract class Terrain
                 Cocotier cocotier2 = new Cocotier();
                 plantes.Add(cocotier2);
 
-                    // Position des plantes
+                // Position des plantes
 
-                x_aleatoire = rng.Next(0,x);
-                y_aleatoire = rng.Next(0,y);
+                x_aleatoire = rng.Next(0, x);
+                y_aleatoire = rng.Next(0, y);
 
-                foreach(Plante plante in plantes)
+                foreach (Plante plante in plantes)
                 {
-                    while(grille[x_aleatoire][y_aleatoire] != "🟫")
+                    while (grille[x_aleatoire][y_aleatoire] != "🟫")
                     {
-                        x_aleatoire = rng.Next(0,x);
-                        y_aleatoire = rng.Next(0,y);
+                        x_aleatoire = rng.Next(0, x);
+                        y_aleatoire = rng.Next(0, y);
                     }
-                    
+
                     grille[x_aleatoire][y_aleatoire] = plante.visuelPlante;
                     plante.x = x_aleatoire;
                     plante.y = y_aleatoire;
                 }
-            break;
+                break;
             case 3: // Dans la zône montagneuse, le joueur commence avec une lentille, un blé et un rosier
 
                 Lentille lentille1 = new Lentille();
@@ -140,22 +140,22 @@ public abstract class Terrain
 
                 // Position des plantes
 
-                x_aleatoire = rng.Next(0,x);
-                y_aleatoire = rng.Next(0,y);
+                x_aleatoire = rng.Next(0, x);
+                y_aleatoire = rng.Next(0, y);
 
-                foreach(Plante plante in plantes)
+                foreach (Plante plante in plantes)
                 {
-                    while(grille[x_aleatoire][y_aleatoire] != "🟫")
+                    while (grille[x_aleatoire][y_aleatoire] != "🟫")
                     {
-                        x_aleatoire = rng.Next(0,x);
-                        y_aleatoire = rng.Next(0,y);
+                        x_aleatoire = rng.Next(0, x);
+                        y_aleatoire = rng.Next(0, y);
                     }
-                    
+
                     grille[x_aleatoire][y_aleatoire] = plante.visuelPlante;
                     plante.x = x_aleatoire;
                     plante.y = y_aleatoire;
                 }
-            break;
+                break;
             case 4: // Dans la zône côtuère, le joueur commence avec un ananas, un tomatier et un palmier à huile
 
                 Ananas ananas1 = new Ananas();
@@ -173,65 +173,84 @@ public abstract class Terrain
 
                 // Position des plantes
 
-                x_aleatoire = rng.Next(0,x);
-                y_aleatoire = rng.Next(0,y);
+                x_aleatoire = rng.Next(0, x);
+                y_aleatoire = rng.Next(0, y);
 
-                foreach(Plante plante in plantes)
+                foreach (Plante plante in plantes)
                 {
-                    while(grille[x_aleatoire][y_aleatoire] != "🟫")
+                    while (grille[x_aleatoire][y_aleatoire] != "🟫")
                     {
-                        x_aleatoire = rng.Next(0,x);
-                        y_aleatoire = rng.Next(0,y);
+                        x_aleatoire = rng.Next(0, x);
+                        y_aleatoire = rng.Next(0, y);
                     }
-                    
+
                     grille[x_aleatoire][y_aleatoire] = plante.visuelPlante;
                     plante.x = x_aleatoire;
                     plante.y = y_aleatoire;
                 }
-            break;
+                break;
         }
-        
+
     }
 
-public string RessourceParTerrain(int numeroTerrain)
-{
-    switch (numeroTerrain)
+    public string RessourceParTerrain(int numeroTerrain)
     {
-        case 1:
-            return $"{ressources[0]} 🥭, {ressources[1]} 🌳, {ressources[2]} 🌿";
-        case 2:
-            return $"{ressources[0]} 🥑, {ressources[1]} 🍆, {ressources[2]} 🥥";
-        case 3:
-            return $"{ressources[0]} 🟢, {ressources[1]} 🌾, {ressources[2]} 🌹";
-        case 4:
-            return $"{ressources[0]} 🍍, {ressources[1]} 🍅, {ressources[2]} 🌴";
-        default:
-            return "Terrain inconnu.";
+        switch (numeroTerrain)
+        {
+            case 1:
+                return $"{ressources[0]} 🥭, {ressources[1]} 🌳, {ressources[2]} 🌿";
+            case 2:
+                return $"{ressources[0]} 🥑, {ressources[1]} 🍆, {ressources[2]} 🥥";
+            case 3:
+                return $"{ressources[0]} 🟢, {ressources[1]} 🌾, {ressources[2]} 🌹";
+            case 4:
+                return $"{ressources[0]} 🍍, {ressources[1]} 🍅, {ressources[2]} 🌴";
+            default:
+                return "Terrain inconnu.";
+        }
     }
-}
 
     public void TourDeJeu()
     {
 
     }
-     
-    
-    public string Afficher()
-        {
+
+
+    public string Afficher() // Méthode Afficher permet de l'appeler dans l'override string ToString() de la classe Monde
+    {
         string enclos = "";
 
         enclos += $"Terrain {numeroTerrain} \nBiome : {biome} \nTempérature : {temperatureActuelleEnDeg} °C \nHumidité : {humiditeActuelle}% \nLuminosité : {luminositeActuelle}% \n";
 
-        for(int i=0; i<grille.Length; i++)
+        for (int i = 0; i < grille.Length; i++)
         {
-            for(int j=0; j<grille[i].Length; j++)
+            for (int j = 0; j < grille[i].Length; j++)
             {
                 enclos += grille[i][j] + "   ";
             }
             enclos += "\n";
             enclos += "\n";
         }
-        enclos += $"Ressources accumulées pour la {biome} : " + RessourceParTerrain(numeroTerrain) +"\n";
+        enclos += $"Ressources accumulées pour la {biome} : " + RessourceParTerrain(numeroTerrain) + "\n";
         return enclos;
     }
+
+  public override string ToString() // Cet override est appelé uniquement lorsque le terrain a besoin d'être affiché seul
+  {
+    string enclos = "";
+
+    enclos += $"Terrain {numeroTerrain} \nBiome : {biome} \nTempérature : {temperatureActuelleEnDeg} °C \nHumidité : {humiditeActuelle}% \nLuminosité : {luminositeActuelle}% \n";
+
+    for (int i = 0; i < grille.Length; i++)
+    {
+        for (int j = 0; j < grille[i].Length; j++)
+        {
+            enclos += grille[i][j] + "   ";
+        }
+        enclos += "\n";
+        enclos += "\n";
+    }
+    enclos += $"Ressources accumulées pour la {biome} : " + RessourceParTerrain(numeroTerrain) + "\n";
+    return enclos;
+  }
 }

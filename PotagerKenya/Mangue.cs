@@ -4,7 +4,7 @@ public class Mangue: Plante
     {
         tempMinEnDeg = 24;
         tempMaxEnDeg = 30;
-        humiditeSolMin = 50;
+        humiditeSolMin = 45;
         humiditeSolMax = 80;
         comestible = true;
         seuilLuminosite = 75;

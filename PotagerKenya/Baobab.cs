@@ -5,9 +5,8 @@ public class Baobab : Plante
         tempMinEnDeg = 20;         // °C
         tempMaxEnDeg = 35;         // °C
         humiditeSolMin = 30;       // %
-        humiditeSolMax = 60;       // %
+        humiditeSolMax = 80;       // %
         comestible = false;        // Utilisé en médecine et pour ombre, pas directement comestible
-        seuilLuminosite = 80;      // % - plein soleil
-        vitesseCroissance = 0;     // Très lente (arbre à croissance lente)
+        seuilLuminosite = 60;      // % - plein soleil
     }
 }

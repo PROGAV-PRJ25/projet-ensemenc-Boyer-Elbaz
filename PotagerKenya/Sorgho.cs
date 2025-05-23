@@ -4,10 +4,9 @@ public class Sorgho : Plante
     {
         tempMinEnDeg = 22;         // °C
         tempMaxEnDeg = 35;         // °C
-        humiditeSolMin = 40;       // %
-        humiditeSolMax = 65;       // %
+        humiditeSolMin = 41;       // %
+        humiditeSolMax = 70;       // %
         comestible = true;         // Céréale comestible
         seuilLuminosite = 70;      // % - aime la lumière mais supporte la sécheresse
-        vitesseCroissance = 2;     // Croissance rapide (saison de culture courte)
     }
 }

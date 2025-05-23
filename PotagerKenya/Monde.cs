@@ -377,7 +377,7 @@ public class Monde
                                     do
                                     {
                                         reponseInvalide = true;
-                                        Console.WriteLine($"Choisissez une plante à semer (vous ne pouvez pas semer si vous n'avez pas de ressource pour la plante) (avocat 🥑 / safou 🍆 / cocotier 🥥)");
+                                        Console.WriteLine($"Choisissez une plante à semer (vous ne pouvez pas semer si vous n'avez pas de ressource pour la plante) (avocat 🥑 {terrain.ressources[0]} / safou 🍆 {terrain.ressources[1]} / cocotier 🥥 {terrain.ressources[2]} )");
                                         ressourceChoisie = Convert.ToString(Console.ReadLine());
                                         if ((ressourceChoisie != "avocat") && (ressourceChoisie != "safou") && (ressourceChoisie != "cocotier"))
                                         {
@@ -465,7 +465,7 @@ public class Monde
                                 case 3:
                                     do
                                     {
-                                        Console.WriteLine($"Choisissez une plante à semer (vous ne pouvez pas semer si vous n'avez pas de ressource pour la plante) (lentille 🟢 / ble 🌾 / rose 🌹)");
+                                        Console.WriteLine($"Choisissez une plante à semer (vous ne pouvez pas semer si vous n'avez pas de ressource pour la plante) (lentille 🟢 {terrain.ressources[0]} / ble 🌾 {terrain.ressources[1]} / rose 🌹 {terrain.ressources[2]} )");
                                         ressourceChoisie = Convert.ToString(Console.ReadLine());
                                         if ((ressourceChoisie != "lentille") && (ressourceChoisie != "ble") && (ressourceChoisie != "rose"))
                                         {
@@ -560,7 +560,7 @@ public class Monde
                                     do
                                     {
                                         reponseInvalide = true;
-                                        Console.WriteLine($"Choisissez une plante à semer (vous ne pouvez pas semer si vous n'avez pas de ressource pour la plante) (ananas 🍍 / tomate 🍅 / palmier 🌴)");
+                                        Console.WriteLine($"Choisissez une plante à semer (vous ne pouvez pas semer si vous n'avez pas de ressource pour la plante) (ananas 🍍 {terrain.ressources[0]} / tomate 🍅 {terrain.ressources[1]} / palmier 🌴 {terrain.ressources[2]} )");
                                         ressourceChoisie = Convert.ToString(Console.ReadLine());
                                         if ((ressourceChoisie != "ananas") && (ressourceChoisie != "tomate") && (ressourceChoisie != "palmier"))
                                         {

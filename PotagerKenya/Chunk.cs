@@ -165,7 +165,7 @@ public class Chunk : Animal
                       }
                       break;
                     case 2:
-                      Console.WriteLine("Voulez-vous lui donner ? (avocat 🥑, sorgho 🍆, coco 🥥)");
+                      Console.WriteLine("Voulez-vous lui donner ? (avocat 🥑, safou 🍆, coco 🥥)");
                       ressourcePourChunk = Convert.ToString(Console.ReadLine());
                       if (ressourcePourChunk == "avocat")
                       {
@@ -174,19 +174,19 @@ public class Chunk : Animal
                         else
                           Console.WriteLine("Vous n'avez plus d'avocat à donner à Chuck");
                       }
-                      if (ressourcePourChunk == "sorgho")
+                      if (ressourcePourChunk == "safou")
                       {
                         if (terrain.ressources[1] > 0)
                           terrain.ressources[1]--;
                         else
-                          Console.WriteLine("Vous n'avez plus de sorgho à donner à Chuck");
+                          Console.WriteLine("Vous n'avez plus de safou à donner à Chuck");
                       }
                       if (ressourcePourChunk == "coco")
                       {
                         if (terrain.ressources[2] > 0)
                           terrain.ressources[2]--;
                         else
-                          Console.WriteLine("Vous n'avez plus de sorgho à donner à Chuck");
+                          Console.WriteLine("Vous n'avez plus de coco à donner à Chuck");
                       }
                       break;
                     case 3:
@@ -275,7 +275,7 @@ public class Chunk : Animal
                       }
                       break;
                     case 2:
-                      Console.WriteLine("Voulez-vous lui donner ? (avocat 🥑, sorgho 🍆, coco 🥥");
+                      Console.WriteLine("Voulez-vous lui donner ? (avocat 🥑, safou 🍆, coco 🥥)");
                       ressourcePourChunk = Convert.ToString(Console.ReadLine());
                       if (ressourcePourChunk == "avocat")
                       {
@@ -284,23 +284,23 @@ public class Chunk : Animal
                         else
                           Console.WriteLine("Vous n'avez plus d'avocat à donner à Chuck");
                       }
-                      if (ressourcePourChunk == "sorgho")
+                      if (ressourcePourChunk == "safou")
                       {
                         if (terrain.ressources[1] > 0)
                           terrain.ressources[1]--;
                         else
-                          Console.WriteLine("Vous n'avez plus de sorgho à donner à Chuck");
+                          Console.WriteLine("Vous n'avez plus de safou à donner à Chuck");
                       }
                       if (ressourcePourChunk == "coco")
                       {
                         if (terrain.ressources[2] > 0)
                           terrain.ressources[2]--;
                         else
-                          Console.WriteLine("Vous n'avez plus de sorgho à donner à Chuck");
+                          Console.WriteLine("Vous n'avez plus de coco à donner à Chuck");
                       }
                       break;
                     case 3:
-                      Console.WriteLine("Voulez-vous lui donner ?  (lentille 🟢, blé 🌾, rose 🌹");
+                      Console.WriteLine("Voulez-vous lui donner ?  (lentille 🟢, blé 🌾, rose 🌹)");
                       ressourcePourChunk = Convert.ToString(Console.ReadLine());
                       if (ressourcePourChunk == "lentille")
                       {
@@ -325,7 +325,7 @@ public class Chunk : Animal
                       }
                       break;
                     case 4:
-                      Console.WriteLine("Voulez-vous lui donner ? (ananas 🍍, tomate 🍅, palmier 🌴");
+                      Console.WriteLine("Voulez-vous lui donner ? (ananas 🍍, tomate 🍅, palmier 🌴)");
                       ressourcePourChunk = Convert.ToString(Console.ReadLine());
                       if (ressourcePourChunk == "ananas")
                       {

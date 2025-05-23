@@ -1,16 +1,14 @@
 public class Monde
 {
-    public List<Terrain> terrainsDuMonde {get; set;}
+    public List<Terrain> terrainsDuMonde {get; set;} // Un monde a des terrains
 
-    public Chunk leChunk {get; set;}
+    public Chunk leChunk {get; set;} // Un monde a des animaux
     
     public LarryLeMalicieux leLarry { get; set; }
 
     public Fee laFee { get; set; }
 
-    public int semaine { get; set; }
-
-    public int mois {get; set;}
+    public int semaine { get; set; } // Un monde possède une temporalité
 
     public Monde()
     {
@@ -33,12 +31,12 @@ public class Monde
         semaine = 1;
     }
 
-    public void SemaineNiveauxRessources()
+    public void SemaineNiveauxRessources() // Montée en niveau des plantes, et nouvelles ressources disponibles
     {
         semaine++;
-        foreach (Terrain terrain in terrainsDuMonde)
+        foreach (Terrain terrain in terrainsDuMonde) // On parcourt les terrains du monde
         {
-            foreach (Plante plante in terrain.plantes)
+            foreach (Plante plante in terrain.plantes) // On parcourt les plantes du terrain
             {
                 if ((plante.enVie)&&(plante.malade == false)) // La plante doit être en vie ET en bonne santé pour grandir ou donner des ressources
                 {
@@ -50,7 +48,7 @@ public class Monde
                         plante.visuelPlante += newLevel;
                         terrain.grille[plante.x][plante.y] = plante.visuelPlante;
                     }
-                    else
+                    else // Si la plante est de niveau 3, elle donne des ressources
                     {
                         switch (terrain.numeroTerrain)
                         {
@@ -117,7 +115,7 @@ public class Monde
         }
     }
 
-    public void MaladieOuMort()
+    public void MaladieOuMort() //Attribution de maladie ou de la mort de plantes
     {
         List<Plante> plantesRetirer = new List<Plante>(); // Les plantes qui vont mourir
 
@@ -161,22 +159,22 @@ public class Monde
                     deathVariable += 0.33;
                 }
 
-                if (deathVariable >= 0.5)
+                if (deathVariable >= 0.5) // Si les conditions de vie de la plante ne sont pas respectées à au moins 50%, la plante meurt
                 {
                     plante.enVie = false;
                     Console.WriteLine($"La plante {plante.visuelPlante} est morte...");
-                    terrain.grille[plante.x][plante.y] = "🟫";
+                    terrain.grille[plante.x][plante.y] = "🟫"; // La plante morte n'apparaît plus à l'écran
                     plantesRetirer.Add(plante);
                 }
             }
             foreach (Plante planteMorte in plantesRetirer)
             {
-                terrain.plantes.Remove(planteMorte);
+                terrain.plantes.Remove(planteMorte); // Les plantes mortes sont retirés de la liste de plantes du terrain
             }
         }
     }
 
-    public void PlanterNouvellePlante()
+    public void PlanterNouvellePlante() // Possibilité de planter des plantes si assez de ressources
     {
         bool reponseInvalide; // Variable qui va nous être utile lorsque le joueur doit répondre à des questions
         bool reponseInvalide2; // Variable qui va nous être utile lorsque l'on rentre dans une double boucle while
@@ -189,17 +187,17 @@ public class Monde
             ressourcesTotalesDesTerrains += terrain.ressourcesTotales;
         }
 
-        if (ressourcesTotalesDesTerrains == 0)
+        if (ressourcesTotalesDesTerrains == 0) // Si pas de ressources : pas de plantage
         {
             Console.WriteLine("Vous n'avez actuellement aucune ressource. Appuyer sur entrée pour passer à la semaine suivante.");
         }
-        else if (ressourcesTotalesDesTerrains > 0)
+        else if (ressourcesTotalesDesTerrains > 0) // Si ressources : possibilité de planter des plantes (autant que l'on veut dans la limite de nos stocks)
             {
                 string reponse;
                 do
                 {
                     reponseInvalide = true;
-                    Console.WriteLine($"Vous disposez de {ressourcesTotalesDesTerrains} ressources. Voulez-vous ensemencer ? (oui/non)");
+                    Console.WriteLine($"Vous disposez de {ressourcesTotalesDesTerrains} ressources. Voulez-vous ensemencer ? (oui/non)"); // Semer ou non
                     reponse = Convert.ToString(Console.ReadLine());
                     if((reponse != "oui")&&(reponse != "non"))
                     {
@@ -222,7 +220,7 @@ public class Monde
                     do
                     {
                         reponseInvalide = true;
-                        Console.WriteLine($"Combien de plantes voulez-vous semer ?");
+                        Console.WriteLine($"Combien de plantes voulez-vous semer ?"); // Choix du nombre de plantes qu'on veut semer
                         string input = Console.ReadLine();
                         
                         // Essayer de convertir l'entrée en entier
@@ -255,7 +253,7 @@ public class Monde
                         do
                         {
                             reponseInvalide = true;
-                            Console.WriteLine("Choisissez un terrain à semer. (1/2/3/4)");
+                            Console.WriteLine("Choisissez un terrain à semer. (1/2/3/4)"); // Choix du terrain à semer
                             string input = Console.ReadLine();
                             
                             if (int.TryParse(input, out numeroTerrainChoisi))
@@ -277,7 +275,7 @@ public class Monde
                                 Console.WriteLine("Veuillez entrer un nombre entier valide.");
                             }
                         }
-                        while (reponseInvalide);
+                        while (reponseInvalide); // Le terrain doit disposer de ressources
 
                         int lignePlante;
                         int colonnePlante;
@@ -290,7 +288,7 @@ public class Monde
                             {
                                 case 1: // Le joueur veut planter sur le terrain 1
 
-                                    do
+                                    do // Choix de la plante à semer
                                     {
                                         reponseInvalide = true;
                                         Console.WriteLine($"Choisissez une plante à semer (vous ne pouvez pas semer si vous n'avez pas de ressource pour la plante) (mangue 🥭 {terrain.ressources[0]} / baobab 🌳 {terrain.ressources[1]} / sorgho 🌿 {terrain.ressources[2]})");
@@ -307,7 +305,7 @@ public class Monde
                                     while (reponseInvalide);
 
                                 
-                                // On traite les cas où il y a des ressources sur le terrain 1 mais le joueur choisit une plante n'ayant pas de ressource
+                                // On traite les cas où il y a des ressources sur le terrain 1 mais le joueur choisit une plante n'ayant pas de ressource // Même processus pour les autres terrains
                                     if ((ressourceChoisie == "mangue") && (terrain.ressources[0] == 0))
                                     {
                                         Console.WriteLine("Vous n'avez pas encore de ressource mangue");
@@ -321,7 +319,7 @@ public class Monde
                                         Console.WriteLine("Vous n'avez pas encore de ressource sorgho");
                                     }
 
-                                    if ((ressourceChoisie == "mangue") && (terrain.ressources[0] > 0))
+                                    if ((ressourceChoisie == "mangue") && (terrain.ressources[0] > 0)) // Si la plante est disponible, alors le joueur choisit où elle est plantée // Même processus pour les autres terrains
                                     {
 
                                         Console.WriteLine("Choisissez la ligne de la plante");
@@ -671,7 +669,7 @@ public class Monde
             }
     }
 
-    public override string ToString()
+    public override string ToString() // Affichage du monde qui est une somme d'affichage de terrains avec la méthode "Afficher()"
     {
         string afficher = $"===== POTAGER semaine {semaine} =====\n\n";
 

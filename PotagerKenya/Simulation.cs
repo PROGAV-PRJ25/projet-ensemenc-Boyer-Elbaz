@@ -1,6 +1,6 @@
 public class Simulation
 {
-    public Monde mondeSimule;
+    public Monde mondeSimule; // Monde qui est simulé, comme la météo ou l'écran titre
 
     public Meteo meteoSimulee;
 
@@ -13,7 +13,7 @@ public class Simulation
         ecranTitreSimule = new EcranTitre();
     }
 
-    public void Simuler()
+    public void Simuler() // Définition des tours de jeu
     {
         ecranTitreSimule.AfficherEcranTitre();  // Ecran titre
         Console.ReadLine();
@@ -64,7 +64,7 @@ public class Simulation
             Console.ReadLine();
         }
 
-        Console.OutputEncoding = System.Text.Encoding.UTF8;
+        Console.OutputEncoding = System.Text.Encoding.UTF8; // Remerciements
         Console.ForegroundColor = ConsoleColor.Green;
         Console.WriteLine(@"
       ╔════════════════════════════════════════════════════════════════════════════════╗

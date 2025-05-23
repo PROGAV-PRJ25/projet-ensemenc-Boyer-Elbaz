@@ -1,6 +1,6 @@
 public class EcranTitre
 {
-  public void AfficherEcranTitre()
+  public void AfficherEcranTitre() // Méthode pour afficher l'écran titre
   {
     Console.OutputEncoding = System.Text.Encoding.UTF8;
     Console.ForegroundColor = ConsoleColor.Green;
@@ -20,10 +20,10 @@ public class EcranTitre
     Console.ResetColor();
   }
 
-  public void ReglesDuJeu()
+  public void ReglesDuJeu() // Méthode pour afficher les règles du jeu
   {
-    Console.OutputEncoding = System.Text.Encoding.UTF8;
-    Console.ForegroundColor = ConsoleColor.Green;
+    Console.OutputEncoding = System.Text.Encoding.UTF8; 
+    Console.ForegroundColor = ConsoleColor.Green; // Couleur verte
 
     Console.WriteLine(@"╔══════════════════════════════════════════════════════════════════════════════╗
 ║                                                                              ║
@@ -59,7 +59,7 @@ public class EcranTitre
 ");
 
 
-    Console.ResetColor();
+    Console.ResetColor(); // Remettre la couleur normalement
   }
   
 

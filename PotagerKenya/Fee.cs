@@ -7,14 +7,14 @@ public class Fee : Animal
     int planteChoisieParLaFee;
     Random rng = new Random();
     int probaReine = rng.Next(0, 10); //La reine des fées peut arriver 1 fois sur 10
-    int probaApparition = rng.Next(0, 2); // Larry le malicieux apparaît 1 fois sur 3
+    int probaApparition = rng.Next(0, 2); // La fée apparaît 1 fois sur 3
     if (probaApparition == 0)
     {
 
-      int numeroTerrainFee = rng.Next(1, 5);
+      int numeroTerrainFee = rng.Next(1, 5); // La fée apparaît sur un terrain au hasard
       foreach (Terrain terrain in monde.terrainsDuMonde)
       {
-        if (terrain.numeroTerrain == numeroTerrainFee)
+        if (terrain.numeroTerrain == numeroTerrainFee) // Sur le terrain où est la fée
         {
           int x_random, y_random;
           do
@@ -22,18 +22,18 @@ public class Fee : Animal
             x_random = rng.Next(0, 7);
             y_random = rng.Next(0, 7);
           }
-          while (terrain.grille[x_random][y_random] != "🟫");
+          while (terrain.grille[x_random][y_random] != "🟫"); // La fée apparaît sur une case vierge
 
           this.x = x_random;
           this.y = y_random;
-          if (probaReine == 0)
+          if (probaReine == 0) // Apparition de la reine des fées (elle n'a pas de pouvoirs supplémentaires)
           {
             terrain.grille[this.x][this.y] = "🧝";
             Console.WriteLine(terrain);
             Console.WriteLine($"⚠️  EVENEMENT RARE : LA REINE DES FEES EST APPARUE SUR LE TERRAIN {numeroTerrainFee}! POUR VOUS AIDER ! (Appuyer sur ENTREE)");
             Console.ReadLine();
           }
-          else
+          else // Apparition de la fée classique
           {
             terrain.grille[this.x][this.y] = "🧚";
             Console.WriteLine(terrain);
@@ -51,7 +51,7 @@ public class Fee : Animal
               planteChoisieParLaFee = rng.Next(1, 4);
               if (planteChoisieParLaFee == 1)
               {
-                Mangue nouvellePlante = new Mangue();
+                Mangue nouvellePlante = new Mangue();    // Affichage de la plante, puis disparition de la fée
                 terrain.plantes.Add(nouvellePlante);
                 nouvellePlante.x = this.x;
                 nouvellePlante.y = this.y;

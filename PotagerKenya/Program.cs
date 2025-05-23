@@ -1,2 +1,2 @@
-﻿Simulation sim = new Simulation();
+﻿Simulation sim = new Simulation(); // Lançement de la simulation
 sim.Simuler();

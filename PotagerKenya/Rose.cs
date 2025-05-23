@@ -8,7 +8,6 @@ public class Rose : Plante
         humiditeSolMax = 80;       // %
         comestible = false;        // décorative (sauf exception)
         seuilLuminosite = 65;      // % - évite lumière trop directe
-        vitesseCroissance = 1;     // Croissance modérée
     }
 }
                 

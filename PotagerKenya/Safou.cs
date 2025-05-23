@@ -8,6 +8,5 @@ public class Safou : Plante
         humiditeSolMax = 85;       // %
         comestible = true;         // Le fruit est très nutritif
         seuilLuminosite = 75;      // % - tolère ombre partielle
-        vitesseCroissance = 1;     // Croissance modérée
     }
 }

@@ -8,6 +8,5 @@ public class PalmierAHuile : Plante
         humiditeSolMax = 90;       // %
         comestible = true;         // Produit des fruits (huile)
         seuilLuminosite = 80;      // % - besoin de forte luminosité, ok avec Terrain4 (90)
-        vitesseCroissance = 2;     // Croissance rapide en climat chaud/humide
     }
 }

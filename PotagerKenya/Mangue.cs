@@ -8,6 +8,5 @@ public class Mangue: Plante
         humiditeSolMax = 80;
         comestible = true;
         seuilLuminosite = 75;
-        vitesseCroissance = 1;
     }
 }

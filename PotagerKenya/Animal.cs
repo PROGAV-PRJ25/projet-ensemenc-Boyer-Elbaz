@@ -1,6 +1,6 @@
 public abstract class Animal
 {
-  public int x {get; set;}
+  public int x {get; set;} //Position de l'animal sur la grille
 
   public int y {get; set;}
 

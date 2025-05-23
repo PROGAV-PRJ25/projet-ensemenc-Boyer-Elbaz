@@ -25,7 +25,7 @@ public class Meteo
 
             // Définition de la température pour le tour
             indicateurTemp = rng.Next(0,101);
-            if((indicateurTemp<=5)||(indicateurTemp>=95))
+            if((indicateurTemp<=5)||(indicateurTemp>=95))  // Les températures extrêmes ont une chance plus faible d'apparition
             {
                 terrain.temperatureActuelleEnDeg += 3;
             }
@@ -40,7 +40,7 @@ public class Meteo
 
         // Définition de la luminosité pour le tour
             indicateurLumi = rng.Next(0,101);
-            if((indicateurLumi<=5)||(indicateurLumi>=95))
+            if((indicateurLumi<=5)||(indicateurLumi>=95)) // Les luminosités extrêmes ont une chance plus faible d'apparition
             {
                 terrain.luminositeActuelle -= 20;
             }
@@ -55,7 +55,7 @@ public class Meteo
             
         // Définition de l'humidité pour le tour
             indicateurHumi = rng.Next(0,101);
-            if((indicateurHumi<=5)||(indicateurHumi>=95))
+            if((indicateurHumi<=5)||(indicateurHumi>=95)) // Les humidités extrêmes ont une chance plus faible d'apparition
             {
                 terrain.humiditeActuelle -= 20;
             }

@@ -7,7 +7,7 @@ public class LarryLeMalicieux : Animal
 
     public override void ApparitionAnimal(Monde monde)
   {
-    int probaDisparition;
+    int probaDisparition; // Proba qu'il s'en aille à chaque tour
     Random rng = new Random();
     int probaApparition = rng.Next(0, 5); // Larry le malicieux apparaît 1 fois sur 5
     if (probaApparition == 0)
@@ -24,7 +24,7 @@ public class LarryLeMalicieux : Animal
             x_random = rng.Next(0, 7);
             y_random = rng.Next(0, 7);
           }
-          while (terrain.grille[x_random][y_random] != "🟫");
+          while (terrain.grille[x_random][y_random] != "🟫"); // Larry le malicieux apparaît sur une case vierge
 
           this.x = x_random;
           this.y = y_random;
@@ -38,17 +38,17 @@ public class LarryLeMalicieux : Animal
           Console.WriteLine("Vous pouvez : Lui faire peur (tapez 1), lui donner une ressource pour qu'il s'en aille (tapez 2)");
           int reaction = Convert.ToInt32(Console.ReadLine());
 
-          if (reaction == 1)
+          if (reaction == 1) // Si on veut faire peur à Larry le malicieux
           {
             Console.WriteLine("Vous : *Oust petit chat empli de malice*");
             probaDisparition = rng.Next(0, 3);
-            if (probaDisparition == 0)
+            if (probaDisparition == 0) // Il part sans rien faire (1/3)
             {
               terrain.grille[this.x][this.y] = "🟫";
               Console.WriteLine(terrain);
               Console.WriteLine("LARRY LE MALICIEUX EST PARTI EMPLI DE MALICE");
             }
-            else
+            else // Il part en posant un piège (2/3)
             {
               // On remplace la case par un piège noir
               terrain.grille[this.x][this.y] += "⬛";

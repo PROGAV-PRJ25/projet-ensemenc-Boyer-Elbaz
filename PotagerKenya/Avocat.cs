@@ -8,6 +8,5 @@ public class Avocat: Plante
         humiditeSolMax = 85;   
         comestible = true;     
         seuilLuminosite = 80;  
-        vitesseCroissance = 1.5;
     }
 }

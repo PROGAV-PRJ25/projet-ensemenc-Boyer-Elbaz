@@ -8,6 +8,5 @@ public class Lentille : Plante
         humiditeSolMax = 75;      // % - tolère jusqu'à ce niveau
         comestible = true;
         seuilLuminosite = 60;     // % - croissance possible sous nuages
-        vitesseCroissance = 1;    // Croissance modérée
     }
 }

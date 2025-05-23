@@ -3,13 +3,13 @@ public class Chunk : Animal
   public Chunk() : base("Chunk") {}
 
 
-  public override void ApparitionAnimal(Monde monde)
+  public override void ApparitionAnimal(Monde monde) //Chunk apparaît dans un monde choisi
   {
-    bool chunkReste = true;
-    int probaDisparition;
+    bool chunkReste = true; // Tant que true Chunk recommence ses actions
+    int probaDisparition;  // Proba qu'il s'en aille à chaque tour
     string caseAvantChunk; // Permet de bien afficher la case sur laquelle était Chunk
     int reaction;
-    Chunk unChunk = new Chunk();
+    Chunk unChunk = new Chunk(); // Chunk
     int x_random;
     int y_random;
     Random rng = new Random();
@@ -19,23 +19,23 @@ public class Chunk : Animal
       int numeroTerrainChunk = rng.Next(1, 5);
       foreach (Terrain terrain in monde.terrainsDuMonde)
       {
-        if (terrain.numeroTerrain == numeroTerrainChunk)
+        if (terrain.numeroTerrain == numeroTerrainChunk) // Je selectionne le terrain de Chunk
         {
           do
           {
             x_random = rng.Next(0, 7);
             y_random = rng.Next(0, 7);
           }
-          while (terrain.grille[x_random][y_random] == "🟫");
+          while (terrain.grille[x_random][y_random] == "🟫"); // La fée apparaît sur une case avec une plante
 
           unChunk.x = x_random;
           unChunk.y = y_random;
           caseAvantChunk = terrain.grille[unChunk.x][unChunk.y];
-          terrain.grille[unChunk.x][unChunk.y] += "🐿️";
+          terrain.grille[unChunk.x][unChunk.y] += "🐿️"; // Chunk arrive sur la case
 
 
           Console.WriteLine(terrain);
-          do
+          do // Chunk réalise ses actions tant qu'il ne s'est pas décidé à partir
           {
             Console.WriteLine($"CHUNK EST SUR LE TERRAIN {numeroTerrainChunk}!! (Appuyer sur ENTREE)");
             Console.ReadLine();
@@ -86,13 +86,13 @@ public class Chunk : Animal
                   terrain.grille[unChunk.x][unChunk.y] += "🐿️";
                 }
                 Console.WriteLine(terrain);
-                Console.WriteLine("CHUNK SE DEPLACE POUR DEVORER DE NOUVELLES PLANTES");
+                Console.WriteLine("CHUNK SE DEPLACE POUR DEVORER DE NOUVELLES PLANTES"); // Il se déplace puis nouveau tour de boucle
               }
             }
-            else if (reaction == 2)
+            else if (reaction == 2) // Si on veut donner une ressource à Chunk
             {
               string ressourcePourChunk;
-              if (terrain.ressourcesTotales == 0)
+              if (terrain.ressourcesTotales == 0) // Si on a pas de ressources
               {
                 Console.WriteLine("Vous n'avez aucune ressource à donner à Chunk... il va se venger (Appuyez sur ENTREE)"); // Vous ne donnez rien à Chunk donc il dévore vos plantes :
                 Console.ReadLine();
@@ -127,7 +127,7 @@ public class Chunk : Animal
                   terrain.grille[unChunk.x][unChunk.y] += "🐿️";
                 }
                 Console.WriteLine(terrain);
-                Console.WriteLine("CHUNK SE DEPLACE POUR DEVORER DE NOUVELLES PLANTES");
+                Console.WriteLine("CHUNK SE DEPLACE POUR DEVORER DE NOUVELLES PLANTES"); // Il se déplace puis nouveau tour de boucle
               }
               else // Si vous avez des ressources à lui donner
               {

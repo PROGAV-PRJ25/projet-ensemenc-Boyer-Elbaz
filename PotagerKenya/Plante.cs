@@ -1,22 +1,22 @@
 public abstract class Plante
 {
-    public string variete {get; set;}
+    public string variete {get; set;} 
 
-    public int numeroSerie {get; set;}
+    public int numeroSerie {get; set;} // Pour identifier la plante
     
-    public string visuelPlante {get; set;}
+    public string visuelPlante {get; set;} 
 
-    public int x {get; set;}
+    public int x {get; set;} //Coordonnées de la plante sur le terrain
     
     public int y {get; set;}
 
     // Attributs définissant les conditions de vie de la plante
     
-    public bool malade {get; set;}
+    public bool malade {get; set;} // Plante malade ou non
     
-    public int semainesMalade {get; set;}
+    public int semainesMalade {get; set;} // Semaines depuis sa contamination
 
-    public double tempMaxEnDeg {get; set;}
+    public double tempMaxEnDeg {get; set;} // Conditions climatiques de la plante
 
     public double tempMinEnDeg {get; set;}
 
@@ -28,8 +28,6 @@ public abstract class Plante
 
     public bool enVie {get; set;}
 
-    public double vitesseCroissance {get; set;}
-
     public double seuilLuminosite {get; set;}
 
     public Plante(int ChoixNumeroSerie)
@@ -37,9 +35,9 @@ public abstract class Plante
         enVie = true; //Lorsque la plante est créée, elle est en vie
         malade = false; //La plante est en bonne santé à sa création
         numeroSerie = ChoixNumeroSerie;
-        if(numeroSerie == 1)
+        if(numeroSerie == 1) // ID
         {
-            variete = "mangue";
+            variete = "mangue";     // Définition des plantes existant dans le monde
             visuelPlante = "🥭";
         }
         else if(numeroSerie == 2)

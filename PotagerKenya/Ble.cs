@@ -8,6 +8,5 @@ public class Ble : Plante
         humiditeSolMax = 70;       // %
         comestible = true;
         seuilLuminosite = 65;      // % - besoin de lumière mais tolère les nuages
-        vitesseCroissance = 2;     // Croissance relativement rapide
     }
 }

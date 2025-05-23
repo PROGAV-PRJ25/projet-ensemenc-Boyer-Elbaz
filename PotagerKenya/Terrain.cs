@@ -1,13 +1,13 @@
 public abstract class Terrain
 {
-    public int x { get; set; }
+    public int x { get; set; } // Coordonnées des cases du terrain
     public int y { get; set; }
 
-    public string[][] grille { get; set; }
+    public string[][] grille { get; set; } // Chaque terrain est une grille
 
-    public List<Plante> plantes { get; set; }
+    public List<Plante> plantes { get; set; } // Chaque terrain possède une liste de plantes
 
-    public int[] ressources { get; set; }
+    public int[] ressources { get; set; } // Chaque terrain à des ressources stockables
 
     public int ressourcesTotales => ressources.Sum();
 
@@ -35,7 +35,7 @@ public abstract class Terrain
 
     public int luminositeActuelle { get; set; }
 
-    public Terrain(int X = 7, int Y = 7)
+    public Terrain(int X = 7, int Y = 7) // Taille 7
     {
         x = X;
         y = Y;
@@ -58,7 +58,7 @@ public abstract class Terrain
         Random rng = new Random();
         switch (numeroTerrain)
         {
-            case 1: // Dans la savane, le joueur commence avec un manguier, un sorgho et un baobab
+            case 1: // Dans la savane, le joueur commence avec deux manguiers, deux sorghos et deux baobabs
 
                 Mangue mangue1 = new Mangue();
                 plantes.Add(mangue1);
@@ -80,7 +80,7 @@ public abstract class Terrain
 
                 foreach (Plante plante in plantes)
                 {
-                    while (grille[x_aleatoire][y_aleatoire] != "🟫")
+                    while (grille[x_aleatoire][y_aleatoire] != "🟫") // Création des plantes sur un espace vierge
                     {
                         x_aleatoire = rng.Next(0, x);
                         y_aleatoire = rng.Next(0, y);
@@ -208,11 +208,6 @@ public abstract class Terrain
             default:
                 return "Terrain inconnu.";
         }
-    }
-
-    public void TourDeJeu()
-    {
-
     }
 
 

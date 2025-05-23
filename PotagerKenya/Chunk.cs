@@ -13,7 +13,7 @@ public class Chunk : Animal
     int x_random;
     int y_random;
     Random rng = new Random();
-    int probaApparition = rng.Next(0,4); // Chunk le gourmand 🐿️ apparaît une fois sur 4 pour s'emparer de nos récoltes
+    int probaApparition = rng.Next(0,4); // Chunk le gourmand 🐿️ apparaît 1 fois sur 4 pour s'emparer de nos récoltes
     if (probaApparition == 0)
     {
       int numeroTerrainChunk = rng.Next(1, 5);

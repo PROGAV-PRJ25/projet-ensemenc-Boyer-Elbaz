@@ -6,6 +6,7 @@ public class Fee : Animal
   {
     int planteChoisieParLaFee;
     Random rng = new Random();
+    int probaReine = rng.Next(0, 10); //La reine des fées peut arriver 1 fois sur 10
     int probaApparition = rng.Next(0, 2); // Larry le malicieux apparaît 1 fois sur 3
     if (probaApparition == 0)
     {
@@ -25,12 +26,23 @@ public class Fee : Animal
 
           this.x = x_random;
           this.y = y_random;
+          if (probaReine == 0)
+          {
+            terrain.grille[this.x][this.y] = "🧝";
+            Console.WriteLine(terrain);
+            Console.WriteLine($"⚠️  EVENEMENT RARE : LA REINE DES FEES EST APPARUE SUR LE TERRAIN {numeroTerrainFee}! POUR VOUS AIDER ! (Appuyer sur ENTREE)");
+            Console.ReadLine();
+          }
+          else
+          {
+            terrain.grille[this.x][this.y] = "🧚";
+            Console.WriteLine(terrain);
+            Console.WriteLine($"UNE FEE EST APPARUE SUR LE TERRAIN {numeroTerrainFee}! POUR VOUS AIDER ! (Appuyer sur ENTREE)");
+            Console.ReadLine();
+          }
+   
 
-          terrain.grille[this.x][this.y] = "🧚";
 
-          Console.WriteLine(terrain);
-          Console.WriteLine($"UNE FEE EST APPARUE SUR LE TERRAIN {numeroTerrainFee}! POUR VOUS AIDER ! (Appuyer sur ENTREE)");
-          Console.ReadLine();
           
         switch (numeroTerrainFee)
           {

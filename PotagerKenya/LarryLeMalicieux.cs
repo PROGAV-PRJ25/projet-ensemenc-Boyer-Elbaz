@@ -309,6 +309,8 @@ public class LarryLeMalicieux : Animal
 
         }
       }
+      Console.WriteLine("Appuyez sur ENTREE");
+      Console.ReadLine();
     }
   }
 }

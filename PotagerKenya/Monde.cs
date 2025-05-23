@@ -28,6 +28,7 @@ public class Monde
 
         leChunk = new Chunk();
         leLarry = new LarryLeMalicieux();
+        laFee = new Fee();
 
         semaine = 1;
     }

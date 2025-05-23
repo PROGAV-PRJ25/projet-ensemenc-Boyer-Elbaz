@@ -394,6 +394,8 @@ public class Chunk : Animal
 
 
       }
+      Console.WriteLine("Appuyez sur ENTREE");
+      Console.ReadLine();
     }
   }
 

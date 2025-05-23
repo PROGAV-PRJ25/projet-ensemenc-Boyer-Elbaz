@@ -287,7 +287,7 @@ public class Monde
                                     do
                                     {
                                         reponseInvalide = true;
-                                        Console.WriteLine($"Choisissez une plante à semer (vous ne pouvez pas semer si vous n'avez pas de ressource pour la plante) (mangue 🥭 / baobab 🌳 / sorgho 🌿)");
+                                        Console.WriteLine($"Choisissez une plante à semer (vous ne pouvez pas semer si vous n'avez pas de ressource pour la plante) (mangue 🥭 {terrain.ressources[0]} / baobab 🌳 {terrain.ressources[1]} / sorgho 🌿 {terrain.ressources[2]})");
                                         ressourceChoisie = Convert.ToString(Console.ReadLine());
                                         if ((ressourceChoisie != "mangue") && (ressourceChoisie != "baobab") && (ressourceChoisie != "sorgho"))
                                         {

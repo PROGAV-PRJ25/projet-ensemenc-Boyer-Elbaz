@@ -54,11 +54,11 @@ public class Simulation
             Console.WriteLine(mondeSimule);
             mondeSimule.PlanterNouvellePlante(); // Donner au joueur la possibilité de planter si ressources nécessaires
 
-            if (i >= 3) // Dans un soucis d'équilibrer le jeu, les malus arrivent à partir de la la semaine 3
+            mondeSimule.laFee.ApparitionAnimal(mondeSimule); // La fée peut arriver (probabilité)
+            if (i >= 3) // Dans un soucis d'équilibrage du jeu, les malus arrivent à partir de la la semaine 3
             {
-                mondeSimule.laFee.ApparitionAnimal(mondeSimule);
-                mondeSimule.leChunk.ApparitionAnimal(mondeSimule);   // Afficher s'il y a un intrus  
-                mondeSimule.leLarry.ApparitionAnimal(mondeSimule);
+                mondeSimule.leChunk.ApparitionAnimal(mondeSimule);   // Chunk peut arriver (probabilité de 1/4)
+                mondeSimule.leLarry.ApparitionAnimal(mondeSimule);  // Larry le malicieux peut arriver (probabilité de 1/5)
             }
 
             Console.ReadLine();

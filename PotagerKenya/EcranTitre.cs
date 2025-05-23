@@ -48,8 +48,10 @@ public class EcranTitre
 ║  📈 Exemple d’évolution d’une plante :                                       ║
 ║    ▸ Mangue Nv.0 🥭   ▸ Mangue Nv.1 🥭I   ▸ Mangue Nv.2 🥭II   ▸ 🥭III       ║
 ║                                                                              ║
-║  ⚠️ Attention ! Un individu nommé *Chunk* rôde dans les parages...            ║
-║     Il aime manger vos récoltes ! Soyez vigilant et protégez vos plantes.    ║
+║  ⚠️ Attention ! Un individu nommé *Chunk* 🐿️ rôde dans les parages...          ║
+║     Il aime manger vos récoltes ! Soyez vigilant et protégez vos plantes.    ║ 
+║     Un chat nommé Larry le malicieux aime vous jouer des tours...            ║
+║     Heureusement, il paraît qu'une bonne fée aime passer dans les parages... ║
 ║                                                                              ║
 ║  🎮 Que la partie commence !                                                 ║
 ╚══════════════════════════════════════════════════════════════════════════════╝

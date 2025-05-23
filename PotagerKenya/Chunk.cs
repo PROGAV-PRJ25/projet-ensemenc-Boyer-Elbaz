@@ -96,7 +96,6 @@ public class Chunk : Animal
               string ressourcePourChunk;
               if (terrain.ressourcesTotales == 0)
               {
-                chunkReste = false;
                 Console.WriteLine("Vous n'avez aucune ressource à donner à Chunk... il va se venger (Appuyez sur ENTREE)"); // Vous ne donnez rien à Chunk donc il dévore vos plantes :
                 Console.ReadLine();
                 terrain.grille[unChunk.x][unChunk.y] = "🐿️";

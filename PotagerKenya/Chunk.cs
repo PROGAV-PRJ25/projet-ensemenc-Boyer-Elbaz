@@ -132,7 +132,7 @@ public class Chunk : Animal
                 Console.WriteLine(terrain);
                 Console.WriteLine("CHUNK SE DEPLACE POUR DEVORER DE NOUVELLES PLANTES");
               }
-              else
+              else // Si vous avez des ressources à lui donner
               {
                 probaDisparition = rng.Next(0, 2);
                 if (probaDisparition == 0) // Chunk part quand on lui donne une ressource (1/2)
@@ -245,7 +245,7 @@ public class Chunk : Animal
                   }
                   terrain.grille[unChunk.x][unChunk.y] = caseAvantChunk;
                   Console.WriteLine(terrain);
-                  Console.WriteLine("CHUNK S'EST ENFUI"); // Chunk s'enfui
+                  Console.WriteLine("CHUNK A ACCEPTE VOTRE CADEAU ET S'EST ENFUI"); // Chunk s'enfui
                 }
                 else //Chunk dévort la plante alors même qu'on lui donne une ressource pour qu'il parte (1/2)
                 {

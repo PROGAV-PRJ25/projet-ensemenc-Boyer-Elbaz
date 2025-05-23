@@ -2,7 +2,7 @@ public class Terrain3: Terrain
 {
     public Terrain3():base()
     {
-        numeroTerrain = 3;
+        numeroTerrain = 3; //ID
         biome = "Zone montagneuse";
         altitudeEnMetres = 2500; // Typique des montagnes kényanes
         typeDeSol = "andosols volcaniques"; // Sols riches souvent trouvés en zone volcanique

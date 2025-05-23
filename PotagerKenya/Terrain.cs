@@ -86,12 +86,12 @@ public abstract class Terrain
                         y_aleatoire = rng.Next(0, y);
                     }
 
-                    grille[x_aleatoire][y_aleatoire] = plante.visuelPlante;
+                    grille[x_aleatoire][y_aleatoire] = plante.visuelPlante; // La plante apparaît à l'écran
                     plante.x = x_aleatoire;
                     plante.y = y_aleatoire;
                 }
                 break;
-            case 2: // Dans la forêt tropicale, le joueur commence avec un avocatier, un safou et un cocotier
+            case 2: // Dans la forêt tropicale, le joueur commence avec deux avocatiers, deux safous et deux cocotiers
                 Avocat avocat1 = new Avocat();
                 plantes.Add(avocat1);
                 Safou safou1 = new Safou();
@@ -112,7 +112,7 @@ public abstract class Terrain
 
                 foreach (Plante plante in plantes)
                 {
-                    while (grille[x_aleatoire][y_aleatoire] != "🟫")
+                    while (grille[x_aleatoire][y_aleatoire] != "🟫") // Création des plantes sur un espace vierge
                     {
                         x_aleatoire = rng.Next(0, x);
                         y_aleatoire = rng.Next(0, y);
@@ -123,7 +123,7 @@ public abstract class Terrain
                     plante.y = y_aleatoire;
                 }
                 break;
-            case 3: // Dans la zône montagneuse, le joueur commence avec une lentille, un blé et un rosier
+            case 3: // Dans la zône montagneuse, le joueur commence avec deux lentilles, deux blés et deux rosiers
 
                 Lentille lentille1 = new Lentille();
                 plantes.Add(lentille1);
@@ -145,7 +145,7 @@ public abstract class Terrain
 
                 foreach (Plante plante in plantes)
                 {
-                    while (grille[x_aleatoire][y_aleatoire] != "🟫")
+                    while (grille[x_aleatoire][y_aleatoire] != "🟫") // Création des plantes sur un espace vierge
                     {
                         x_aleatoire = rng.Next(0, x);
                         y_aleatoire = rng.Next(0, y);
@@ -156,7 +156,7 @@ public abstract class Terrain
                     plante.y = y_aleatoire;
                 }
                 break;
-            case 4: // Dans la zône côtuère, le joueur commence avec un ananas, un tomatier et un palmier à huile
+            case 4: // Dans la zône côtuère, le joueur commence avec deux ananas, deux tomatiers et deux palmiers à huile
 
                 Ananas ananas1 = new Ananas();
                 plantes.Add(ananas1);
@@ -178,7 +178,7 @@ public abstract class Terrain
 
                 foreach (Plante plante in plantes)
                 {
-                    while (grille[x_aleatoire][y_aleatoire] != "🟫")
+                    while (grille[x_aleatoire][y_aleatoire] != "🟫") // Création des plantes sur un espace vierge
                     {
                         x_aleatoire = rng.Next(0, x);
                         y_aleatoire = rng.Next(0, y);
@@ -193,14 +193,14 @@ public abstract class Terrain
 
     }
 
-    public string RessourceParTerrain(int numeroTerrain)
+    public string RessourceParTerrain(int numeroTerrain) // Permet l'affichage des ressources en bas de chaque terrain
     {
         switch (numeroTerrain)
         {
             case 1:
-                return $"{ressources[0]} 🥭, {ressources[1]} 🌳, {ressources[2]} 🌿";
+                return $"{ressources[0]} 🥭, {ressources[1]} 🌳, {ressources[2]} 🌿"; // La mangue est la ressouce n°1 du terrain 1, le baobab est la n°2 du terrain 1, et le sorgho est la n°3 du terrain 1 
             case 2:
-                return $"{ressources[0]} 🥑, {ressources[1]} 🍆, {ressources[2]} 🥥";
+                return $"{ressources[0]} 🥑, {ressources[1]} 🍆, {ressources[2]} 🥥"; // De même pour les autres terrains
             case 3:
                 return $"{ressources[0]} 🟢, {ressources[1]} 🌾, {ressources[2]} 🌹";
             case 4:
@@ -212,8 +212,8 @@ public abstract class Terrain
 
 
     public string Afficher() // Méthode Afficher permet de l'appeler dans l'override string ToString() de la classe Monde
-    {
-        string enclos = "";
+    {                           // Permet d'afficher un terrain avec ses ressources
+        string enclos = ""; // La variable enclos compile chaque case qu'elle affiche ensuite sous la forme d'un terrain
 
         enclos += $"Terrain {numeroTerrain} \nBiome : {biome} \nTempérature : {temperatureActuelleEnDeg} °C \nHumidité : {humiditeActuelle}% \nLuminosité : {luminositeActuelle}% \n";
 
@@ -230,7 +230,7 @@ public abstract class Terrain
         return enclos;
     }
 
-  public override string ToString() // Cet override est appelé uniquement lorsque le terrain a besoin d'être affiché seul
+  public override string ToString() // Cet override est appelé uniquement lorsque le terrain a besoin d'être affiché seul (quand un animal apparaît sur un terrain)
   {
     string enclos = "";
 

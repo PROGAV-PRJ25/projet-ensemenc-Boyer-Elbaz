@@ -25,7 +25,8 @@ public class Simulation
         Console.WriteLine(@"
       ╔══════════════════════════════════════════════════════════════════╗
       ║                                                                  ║
-      ║        🌿 CHOISISSEZ UN NOMBRE DE SEMAINES A SIMULER 🌿          ║
+      ║        🌿 CHOISISSEZ UN NOMBRE DE SEMAINES A SIMULER 🌿         ║
+      ║         [UNE PARTIE LONGUE EST D'ENVIRON 90 SEMAINES]            ║
       ║                                                                  ║
       ╚══════════════════════════════════════════════════════════════════╝
 

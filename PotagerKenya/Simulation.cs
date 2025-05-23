@@ -56,6 +56,7 @@ public class Simulation
 
             if (i >= 3) // Dans un soucis d'équilibrer le jeu, les malus arrivent à partir de la la semaine 3
             {
+                mondeSimule.laFee.ApparitionAnimal(mondeSimule);
                 mondeSimule.leChunk.ApparitionAnimal(mondeSimule);   // Afficher s'il y a un intrus  
                 mondeSimule.leLarry.ApparitionAnimal(mondeSimule);
             }

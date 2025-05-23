@@ -6,6 +6,8 @@ public class Monde
     
     public LarryLeMalicieux leLarry { get; set; }
 
+    public Fee laFee { get; set; }
+
     public int semaine { get; set; }
 
     public int mois {get; set;}

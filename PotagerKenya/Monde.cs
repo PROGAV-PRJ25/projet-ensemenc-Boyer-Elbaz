@@ -317,25 +317,14 @@ public class Monde
 
                                     if ((ressourceChoisie == "mangue") && (terrain.ressources[0] > 0))
                                     {
-                                        do
-                                        {
-                                            reponseInvalide = true;
-                                            Console.WriteLine("Choisissez la ligne de la plante");
-                                            lignePlante = Convert.ToInt32(Console.ReadLine());
-                                            lignePlante--;
-                                            Console.WriteLine("Choisissez la colonne de la plante");
-                                            colonnePlante = Convert.ToInt32(Console.ReadLine());
-                                            colonnePlante--;
-                                            if ((lignePlante < 0) && (lignePlante > 6) || (colonnePlante < 0) && (colonnePlante > 6) || (terrain.grille[lignePlante][colonnePlante] != "🟫"))
-                                            {
-                                                Console.WriteLine("Veuillez entrer une ligne ou colonne valide");
-                                            }
-                                            else
-                                            {
-                                                reponseInvalide2 = false;
-                                            }
-                                        }
-                                        while (reponseInvalide);
+
+                                        Console.WriteLine("Choisissez la ligne de la plante");
+                                        lignePlante = Convert.ToInt32(Console.ReadLine());
+                                        lignePlante--;
+                                        Console.WriteLine("Choisissez la colonne de la plante");
+                                        colonnePlante = Convert.ToInt32(Console.ReadLine());
+                                        colonnePlante--;
+
 
                                         Mangue nouvellePlante = new Mangue();
                                         terrain.plantes.Add(nouvellePlante);
@@ -347,25 +336,14 @@ public class Monde
                                     }
                                     else if ((ressourceChoisie == "baobab") && (terrain.ressources[1] > 0))
                                     {
-                                        do
-                                        {
-                                            reponseInvalide = true;
-                                            Console.WriteLine("Choisissez la ligne de la plante");
-                                            lignePlante = Convert.ToInt32(Console.ReadLine());
-                                            lignePlante--;
-                                            Console.WriteLine("Choisissez la colonne de la plante");
-                                            colonnePlante = Convert.ToInt32(Console.ReadLine());
-                                            colonnePlante--;
-                                            if ((lignePlante < 0) && (lignePlante > 6) || (colonnePlante < 0) && (colonnePlante > 6) || (terrain.grille[lignePlante][colonnePlante] != "🟫"))
-                                            {
-                                                Console.WriteLine("Veuillez entrer une ligne ou colonne valide");
-                                            }
-                                            else
-                                            {
-                                                reponseInvalide2 = false;
-                                            }
-                                        }
-                                        while (reponseInvalide);
+                                        reponseInvalide = true;
+                                        Console.WriteLine("Choisissez la ligne de la plante");
+                                        lignePlante = Convert.ToInt32(Console.ReadLine());
+                                        lignePlante--;
+                                        Console.WriteLine("Choisissez la colonne de la plante");
+                                        colonnePlante = Convert.ToInt32(Console.ReadLine());
+                                        colonnePlante--;
+
 
                                         Baobab nouvellePlante = new Baobab();
                                         terrain.plantes.Add(nouvellePlante);
@@ -377,25 +355,14 @@ public class Monde
                                     }
                                     else if ((ressourceChoisie == "sorgho") && (terrain.ressources[2] > 0))
                                     {
-                                        do
-                                        {
-                                            reponseInvalide = true;
-                                            Console.WriteLine("Choisissez la ligne de la plante");
-                                            lignePlante = Convert.ToInt32(Console.ReadLine());
-                                            lignePlante--;
-                                            Console.WriteLine("Choisissez la colonne de la plante");
-                                            colonnePlante = Convert.ToInt32(Console.ReadLine());
-                                            colonnePlante--;
-                                            if ((lignePlante < 0) && (lignePlante > 6) || (colonnePlante < 0) && (colonnePlante > 6) || (terrain.grille[lignePlante][colonnePlante] != "🟫"))
-                                            {
-                                                Console.WriteLine("Veuillez entrer une ligne ou colonne valide");
-                                            }
-                                            else
-                                            {
-                                                reponseInvalide2 = false;
-                                            }
-                                        }
-                                        while (reponseInvalide);
+
+                                        Console.WriteLine("Choisissez la ligne de la plante");
+                                        lignePlante = Convert.ToInt32(Console.ReadLine());
+                                        lignePlante--;
+                                        Console.WriteLine("Choisissez la colonne de la plante");
+                                        colonnePlante = Convert.ToInt32(Console.ReadLine());
+                                        colonnePlante--;
+
 
                                         Sorgho nouvellePlante = new Sorgho();
                                         terrain.plantes.Add(nouvellePlante);
@@ -440,25 +407,13 @@ public class Monde
 
                                     if ((ressourceChoisie == "avocat") && (terrain.ressources[0] > 0))
                                     {
-                                        do
-                                        {
-                                            reponseInvalide = true;
-                                            Console.WriteLine("Choisissez la ligne de la plante");
-                                            lignePlante = Convert.ToInt32(Console.ReadLine());
-                                            lignePlante--;
-                                            Console.WriteLine("Choisissez la colonne de la plante");
-                                            colonnePlante = Convert.ToInt32(Console.ReadLine());
-                                            colonnePlante--;
-                                            if ((lignePlante < 0) && (lignePlante > 6) || (colonnePlante < 0) && (colonnePlante > 6) || (terrain.grille[lignePlante][colonnePlante] != "🟫"))
-                                            {
-                                                Console.WriteLine("Veuillez entrer une ligne ou colonne valide");
-                                            }
-                                            else
-                                            {
-                                                reponseInvalide2 = false;
-                                            }
-                                        }
-                                        while (reponseInvalide);
+                                        Console.WriteLine("Choisissez la ligne de la plante");
+                                        lignePlante = Convert.ToInt32(Console.ReadLine());
+                                        lignePlante--;
+                                        Console.WriteLine("Choisissez la colonne de la plante");
+                                        colonnePlante = Convert.ToInt32(Console.ReadLine());
+                                        colonnePlante--;
+
 
                                         Avocat nouvellePlante = new Avocat();
                                         terrain.plantes.Add(nouvellePlante);
@@ -470,25 +425,13 @@ public class Monde
                                     }
                                     else if ((ressourceChoisie == "safou") && (terrain.ressources[1] > 0))
                                     {
-                                        do
-                                        {
-                                            reponseInvalide = true;
-                                            Console.WriteLine("Choisissez la ligne de la plante");
-                                            lignePlante = Convert.ToInt32(Console.ReadLine());
-                                            lignePlante--;
-                                            Console.WriteLine("Choisissez la colonne de la plante");
-                                            colonnePlante = Convert.ToInt32(Console.ReadLine());
-                                            colonnePlante--;
-                                            if ((lignePlante < 0) && (lignePlante > 6) || (colonnePlante < 0) && (colonnePlante > 6) || (terrain.grille[lignePlante][colonnePlante] != "🟫"))
-                                            {
-                                                Console.WriteLine("Veuillez entrer une ligne ou colonne valide");
-                                            }
-                                            else
-                                            {
-                                                reponseInvalide2 = false;
-                                            }
-                                        }
-                                        while (reponseInvalide);
+                                        reponseInvalide = true;
+                                        Console.WriteLine("Choisissez la ligne de la plante");
+                                        lignePlante = Convert.ToInt32(Console.ReadLine());
+                                        lignePlante--;
+                                        Console.WriteLine("Choisissez la colonne de la plante");
+                                        colonnePlante = Convert.ToInt32(Console.ReadLine());
+                                        colonnePlante--;
 
                                         Safou nouvellePlante = new Safou();
                                         terrain.plantes.Add(nouvellePlante);
@@ -497,47 +440,17 @@ public class Monde
                                         terrain.grille[nouvellePlante.x][nouvellePlante.y] = "🍆";
                                         terrain.ressources[1]--;
                                         Console.WriteLine("Votre plante à été plantée avec succès.");
+
                                     }
                                     else if ((ressourceChoisie == "cocotier") && (terrain.ressources[2] > 0))
                                     {
-                                        do
-                                        {
-                                            reponseInvalide = true;
-                                            do
-                                            {
-                                                reponseInvalide2 = true;
-                                                Console.WriteLine("Choisissez la ligne de la plante");
-                                                lignePlante = Convert.ToInt32(Console.ReadLine());
-                                                lignePlante--;
-                                                Console.WriteLine("Choisissez la colonne de la plante");
-                                                colonnePlante = Convert.ToInt32(Console.ReadLine());
-                                                colonnePlante--;
-                                                if ((lignePlante < 0) && (lignePlante > 6) || (colonnePlante < 0) && (colonnePlante > 6))
-                                                {
-                                                    Console.WriteLine("Veuillez entrer une ligne ou colonne valide");
-                                                }
-                                                else
-                                                {
-                                                    reponseInvalide2 = false;
-                                                }
-                                            }
-                                            while (reponseInvalide2);
-                                            Console.WriteLine("Choisissez la ligne de la plante");
-                                            lignePlante = Convert.ToInt32(Console.ReadLine());
-                                            lignePlante--;
-                                            Console.WriteLine("Choisissez la colonne de la plante");
-                                            colonnePlante = Convert.ToInt32(Console.ReadLine());
-                                            colonnePlante--;
-                                            if (terrain.grille[lignePlante][colonnePlante] != "🟫")
-                                            {
-                                                Console.WriteLine("Une plante existe déjà à cet emplacement, veuillez rechoisir.");
-                                            }
-                                            else
-                                            {
-                                                reponseInvalide = false;
-                                            }
-                                        }
-                                        while (reponseInvalide);
+                                        reponseInvalide = true;
+                                        Console.WriteLine("Choisissez la ligne de la plante");
+                                        lignePlante = Convert.ToInt32(Console.ReadLine());
+                                        lignePlante--;
+                                        Console.WriteLine("Choisissez la colonne de la plante");
+                                        colonnePlante = Convert.ToInt32(Console.ReadLine());
+                                        colonnePlante--;
 
                                         Cocotier nouvellePlante = new Cocotier();
                                         terrain.plantes.Add(nouvellePlante);
@@ -582,25 +495,15 @@ public class Monde
                                     if ((ressourceChoisie == "lentille") && (terrain.ressources[0] > 0))
                                     {
 
-                                        do
-                                        {
-                                            reponseInvalide = true;
-                                            Console.WriteLine("Choisissez la ligne de la plante");
-                                            lignePlante = Convert.ToInt32(Console.ReadLine());
-                                            lignePlante--;
-                                            Console.WriteLine("Choisissez la colonne de la plante");
-                                            colonnePlante = Convert.ToInt32(Console.ReadLine());
-                                            colonnePlante--;
-                                            if ((lignePlante < 0) && (lignePlante > 6) || (colonnePlante < 0) && (colonnePlante > 6) || (terrain.grille[lignePlante][colonnePlante] != "🟫"))
-                                            {
-                                                Console.WriteLine("Veuillez entrer une ligne ou colonne valide");
-                                            }
-                                            else
-                                            {
-                                                reponseInvalide2 = false;
-                                            }
-                                        }
-                                        while (reponseInvalide);
+
+                                        reponseInvalide = true;
+                                        Console.WriteLine("Choisissez la ligne de la plante");
+                                        lignePlante = Convert.ToInt32(Console.ReadLine());
+                                        lignePlante--;
+                                        Console.WriteLine("Choisissez la colonne de la plante");
+                                        colonnePlante = Convert.ToInt32(Console.ReadLine());
+                                        colonnePlante--;
+
 
                                         Lentille nouvellePlante = new Lentille();
                                         terrain.plantes.Add(nouvellePlante);
@@ -608,29 +511,19 @@ public class Monde
                                         nouvellePlante.y = colonnePlante;
                                         terrain.grille[nouvellePlante.x][nouvellePlante.y] = "🟢";
                                         terrain.ressources[0]--;
+                                        Console.WriteLine("Votre plante à été plantée avec succès.");
                                     }
                                     else if ((ressourceChoisie == "ble") && (terrain.ressources[1] > 0))
                                     {
 
-                                        do
-                                        {
-                                            reponseInvalide = true;
-                                            Console.WriteLine("Choisissez la ligne de la plante");
-                                            lignePlante = Convert.ToInt32(Console.ReadLine());
-                                            lignePlante--;
-                                            Console.WriteLine("Choisissez la colonne de la plante");
-                                            colonnePlante = Convert.ToInt32(Console.ReadLine());
-                                            colonnePlante--;
-                                            if ((lignePlante < 0) && (lignePlante > 6) || (colonnePlante < 0) && (colonnePlante > 6) || (terrain.grille[lignePlante][colonnePlante] != "🟫"))
-                                            {
-                                                Console.WriteLine("Veuillez entrer une ligne ou colonne valide");
-                                            }
-                                            else
-                                            {
-                                                reponseInvalide2 = false;
-                                            }
-                                        }
-                                        while (reponseInvalide);
+                                        reponseInvalide = true;
+                                        Console.WriteLine("Choisissez la ligne de la plante");
+                                        lignePlante = Convert.ToInt32(Console.ReadLine());
+                                        lignePlante--;
+                                        Console.WriteLine("Choisissez la colonne de la plante");
+                                        colonnePlante = Convert.ToInt32(Console.ReadLine());
+                                        colonnePlante--;
+
 
                                         Ble nouvellePlante = new Ble();
                                         terrain.plantes.Add(nouvellePlante);
@@ -638,33 +531,19 @@ public class Monde
                                         nouvellePlante.y = colonnePlante;
                                         terrain.grille[nouvellePlante.x][nouvellePlante.y] = "🌾";
                                         terrain.ressources[1]--;
+                                        Console.WriteLine("Votre plante à été plantée avec succès.");
                                     }
                                     else if ((ressourceChoisie == "rose") && (terrain.ressources[2] > 0))
                                     {
 
-                                        do
-                                        {
-                                            reponseInvalide = true;
-                                            Console.WriteLine("Choisissez la ligne de la plante");
-                                            lignePlante = Convert.ToInt32(Console.ReadLine());
-                                            lignePlante--;
-                                            Console.WriteLine("Choisissez la colonne de la plante");
-                                            colonnePlante = Convert.ToInt32(Console.ReadLine());
-                                            colonnePlante--;
-                                            if ((lignePlante < 0) && (lignePlante > 6) || (colonnePlante < 0) && (colonnePlante > 6))
-                                            {
-                                                Console.WriteLine("Veuillez entrer une ligne ou colonne valide");
-                                            }
-                                            else if ((terrain.grille[lignePlante][colonnePlante] != "🟫"))
-                                            {
-                                                
-                                            }
-                                            else
-                                            {
-                                                reponseInvalide2 = false;
-                                            }
-                                        }
-                                        while (reponseInvalide);
+                                        reponseInvalide = true;
+                                        Console.WriteLine("Choisissez la ligne de la plante");
+                                        lignePlante = Convert.ToInt32(Console.ReadLine());
+                                        lignePlante--;
+                                        Console.WriteLine("Choisissez la colonne de la plante");
+                                        colonnePlante = Convert.ToInt32(Console.ReadLine());
+                                        colonnePlante--;
+
 
                                         Rose nouvellePlante = new Rose();
                                         terrain.plantes.Add(nouvellePlante);
@@ -672,6 +551,8 @@ public class Monde
                                         nouvellePlante.y = colonnePlante;
                                         terrain.grille[nouvellePlante.x][nouvellePlante.y] = "🌹";
                                         terrain.ressources[2]--;
+                                        Console.WriteLine("Votre plante à été plantée avec succès.");
+
                                     }
 
                                     break;
@@ -710,25 +591,14 @@ public class Monde
 
                                     if ((ressourceChoisie == "ananas") && (terrain.ressources[0] > 0))
                                     {
-                                        do
-                                        {
-                                            reponseInvalide = true;
-                                            Console.WriteLine("Choisissez la ligne de la plante");
-                                            lignePlante = Convert.ToInt32(Console.ReadLine());
-                                            lignePlante--;
-                                            Console.WriteLine("Choisissez la colonne de la plante");
-                                            colonnePlante = Convert.ToInt32(Console.ReadLine());
-                                            colonnePlante--;
-                                            if ((lignePlante < 0) && (lignePlante > 6) || (colonnePlante < 0) && (colonnePlante > 6) || (terrain.grille[lignePlante][colonnePlante] != "🟫"))
-                                            {
-                                                Console.WriteLine("Veuillez entrer une ligne ou colonne valide");
-                                            }
-                                            else
-                                            {
-                                                reponseInvalide2 = false;
-                                            }
-                                        }
-                                        while (reponseInvalide);
+
+                                        Console.WriteLine("Choisissez la ligne de la plante");
+                                        lignePlante = Convert.ToInt32(Console.ReadLine());
+                                        lignePlante--;
+                                        Console.WriteLine("Choisissez la colonne de la plante");
+                                        colonnePlante = Convert.ToInt32(Console.ReadLine());
+                                        colonnePlante--;
+ 
 
                                         Ananas nouvellePlante = new Ananas();
                                         terrain.plantes.Add(nouvellePlante);
@@ -740,25 +610,15 @@ public class Monde
                                     }
                                     else if ((ressourceChoisie == "tomate") && (terrain.ressources[1] > 0))
                                     {
-                                        do
-                                        {
-                                            reponseInvalide = true;
-                                            Console.WriteLine("Choisissez la ligne de la plante");
-                                            lignePlante = Convert.ToInt32(Console.ReadLine());
-                                            lignePlante--;
-                                            Console.WriteLine("Choisissez la colonne de la plante");
-                                            colonnePlante = Convert.ToInt32(Console.ReadLine());
-                                            colonnePlante--;
-                                            if ((lignePlante < 0) && (lignePlante > 6) || (colonnePlante < 0) && (colonnePlante > 6) || (terrain.grille[lignePlante][colonnePlante] != "🟫"))
-                                            {
-                                                Console.WriteLine("Veuillez entrer une ligne ou colonne valide");
-                                            }
-                                            else
-                                            {
-                                                reponseInvalide2 = false;
-                                            }
-                                        }
-                                        while (reponseInvalide);
+
+                                        reponseInvalide = true;
+                                        Console.WriteLine("Choisissez la ligne de la plante");
+                                        lignePlante = Convert.ToInt32(Console.ReadLine());
+                                        lignePlante--;
+                                        Console.WriteLine("Choisissez la colonne de la plante");
+                                        colonnePlante = Convert.ToInt32(Console.ReadLine());
+                                        colonnePlante--;
+
 
                                         Tomate nouvellePlante = new Tomate();
                                         terrain.plantes.Add(nouvellePlante);
@@ -770,25 +630,15 @@ public class Monde
                                     }
                                     else if ((ressourceChoisie == "palmier") && (terrain.ressources[2] > 0))
                                     {
-                                        do
-                                        {
-                                            reponseInvalide = true;
-                                            Console.WriteLine("Choisissez la ligne de la plante");
-                                            lignePlante = Convert.ToInt32(Console.ReadLine());
-                                            lignePlante--;
-                                            Console.WriteLine("Choisissez la colonne de la plante");
-                                            colonnePlante = Convert.ToInt32(Console.ReadLine());
-                                            colonnePlante--;
-                                            if ((lignePlante < 0) && (lignePlante > 6) || (colonnePlante < 0) && (colonnePlante > 6) || (terrain.grille[lignePlante][colonnePlante] != "🟫"))
-                                            {
-                                                Console.WriteLine("Veuillez entrer une ligne ou colonne valide");
-                                            }
-                                            else
-                                            {
-                                                reponseInvalide2 = false;
-                                            }
-                                        }
-                                        while (reponseInvalide);
+
+                                        reponseInvalide = true;
+                                        Console.WriteLine("Choisissez la ligne de la plante");
+                                        lignePlante = Convert.ToInt32(Console.ReadLine());
+                                        lignePlante--;
+                                        Console.WriteLine("Choisissez la colonne de la plante");
+                                        colonnePlante = Convert.ToInt32(Console.ReadLine());
+                                        colonnePlante--;
+
 
                                         PalmierAHuile nouvellePlante = new PalmierAHuile();
                                         terrain.plantes.Add(nouvellePlante);
